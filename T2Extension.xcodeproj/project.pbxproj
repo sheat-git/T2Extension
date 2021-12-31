@@ -7,18 +7,75 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67A3A19E277EE47100A70F65 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 67A3A19D277EE47100A70F65 /* Preview Content */; };
 		67FD90B1277ED5D8000FAB94 /* T2ExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90B0277ED5D8000FAB94 /* T2ExtensionApp.swift */; };
 		67FD90B3277ED5D8000FAB94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90B2277ED5D8000FAB94 /* ContentView.swift */; };
 		67FD90B5277ED5DE000FAB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90B4277ED5DE000FAB94 /* Assets.xcassets */; };
-		67FD90B8277ED5DE000FAB94 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90B7277ED5DE000FAB94 /* Preview Assets.xcassets */; };
+		67FD90C6277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90C5277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift */; };
+		67FD90C9277ED629000FAB94 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90C8277ED629000FAB94 /* _locales */; };
+		67FD90CB277ED629000FAB94 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90CA277ED629000FAB94 /* images */; };
+		67FD90CD277ED629000FAB94 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90CC277ED629000FAB94 /* manifest.json */; };
+		67FD90CF277ED629000FAB94 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90CE277ED629000FAB94 /* background.js */; };
+		67FD90D1277ED629000FAB94 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90D0277ED629000FAB94 /* content.js */; };
+		67FD90D3277ED629000FAB94 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90D2277ED629000FAB94 /* popup.html */; };
+		67FD90D5277ED629000FAB94 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90D4277ED629000FAB94 /* popup.css */; };
+		67FD90D7277ED629000FAB94 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90D6277ED629000FAB94 /* popup.js */; };
+		67FD90DB277ED629000FAB94 /* T2AutoLogin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 67FD90C3277ED629000FAB94 /* T2AutoLogin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		67FD90E9277ED73E000FAB94 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90E8277ED73E000FAB94 /* EditView.swift */; };
+		67FD90EC277ED760000FAB94 /* EditMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EB277ED760000FAB94 /* EditMatrixView.swift */; };
+		67FD90EE277ED76E000FAB94 /* EditMatrixRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90ED277ED76E000FAB94 /* EditMatrixRowView.swift */; };
+		67FD90F0277ED7E0000FAB94 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */; };
+		67FD90F1277ED7E0000FAB94 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		67FD90D9277ED629000FAB94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 67FD90A5277ED5D8000FAB94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 67FD90C2277ED629000FAB94;
+			remoteInfo = T2AutoLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		67FD90E0277ED629000FAB94 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				67FD90DB277ED629000FAB94 /* T2AutoLogin.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		67A3A19D277EE47100A70F65 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Preview Content"; path = "../../../.Trash/Preview Content"; sourceTree = "<group>"; };
+		67A3A1A0277EE48700A70F65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67FD90AD277ED5D8000FAB94 /* T2Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T2Extension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FD90B0277ED5D8000FAB94 /* T2ExtensionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = T2ExtensionApp.swift; sourceTree = "<group>"; };
 		67FD90B2277ED5D8000FAB94 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67FD90B4277ED5DE000FAB94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		67FD90B7277ED5DE000FAB94 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		67FD90BE277ED5EA000FAB94 /* T2Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = T2Extension.entitlements; sourceTree = "<group>"; };
+		67FD90C3277ED629000FAB94 /* T2AutoLogin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = T2AutoLogin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		67FD90C5277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler_AutoLogin.swift; sourceTree = "<group>"; };
+		67FD90C8277ED629000FAB94 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		67FD90CA277ED629000FAB94 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		67FD90CC277ED629000FAB94 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		67FD90CE277ED629000FAB94 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		67FD90D0277ED629000FAB94 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		67FD90D2277ED629000FAB94 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		67FD90D4277ED629000FAB94 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		67FD90D6277ED629000FAB94 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		67FD90D8277ED629000FAB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67FD90DC277ED629000FAB94 /* T2AutoLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = T2AutoLogin.entitlements; sourceTree = "<group>"; };
+		67FD90E8277ED73E000FAB94 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		67FD90EB277ED760000FAB94 /* EditMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatrixView.swift; sourceTree = "<group>"; };
+		67FD90ED277ED76E000FAB94 /* EditMatrixRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatrixRowView.swift; sourceTree = "<group>"; };
+		67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,13 +86,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		67FD90C0277ED629000FAB94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		67A3A19F277EE48700A70F65 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				67A3A1A0277EE48700A70F65 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		67FD90A4277ED5D8000FAB94 = {
 			isa = PBXGroup;
 			children = (
 				67FD90AF277ED5D8000FAB94 /* T2Extension */,
+				67A3A19D277EE47100A70F65 /* Preview Content */,
 				67FD90AE277ED5D8000FAB94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				67FD90AD277ED5D8000FAB94 /* T2Extension.app */,
+				67FD90C3277ED629000FAB94 /* T2AutoLogin.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,20 +125,68 @@
 		67FD90AF277ED5D8000FAB94 /* T2Extension */ = {
 			isa = PBXGroup;
 			children = (
+				67A3A19F277EE48700A70F65 /* Preview Content */,
 				67FD90B0277ED5D8000FAB94 /* T2ExtensionApp.swift */,
-				67FD90B2277ED5D8000FAB94 /* ContentView.swift */,
+				67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */,
+				67FD90BE277ED5EA000FAB94 /* T2Extension.entitlements */,
 				67FD90B4277ED5DE000FAB94 /* Assets.xcassets */,
-				67FD90B6277ED5DE000FAB94 /* Preview Content */,
+				67FD90E1277ED69A000FAB94 /* Views */,
+				67FD90E3277ED6D1000FAB94 /* Extensions */,
 			);
 			path = T2Extension;
 			sourceTree = "<group>";
 		};
-		67FD90B6277ED5DE000FAB94 /* Preview Content */ = {
+		67FD90C4277ED629000FAB94 /* T2AutoLogin */ = {
 			isa = PBXGroup;
 			children = (
-				67FD90B7277ED5DE000FAB94 /* Preview Assets.xcassets */,
+				67FD90DC277ED629000FAB94 /* T2AutoLogin.entitlements */,
+				67FD90C5277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift */,
+				67FD90D8277ED629000FAB94 /* Info.plist */,
+				67FD90C7277ED629000FAB94 /* Resources */,
 			);
-			path = "Preview Content";
+			path = T2AutoLogin;
+			sourceTree = "<group>";
+		};
+		67FD90C7277ED629000FAB94 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				67FD90C8277ED629000FAB94 /* _locales */,
+				67FD90CA277ED629000FAB94 /* images */,
+				67FD90CC277ED629000FAB94 /* manifest.json */,
+				67FD90CE277ED629000FAB94 /* background.js */,
+				67FD90D0277ED629000FAB94 /* content.js */,
+				67FD90D2277ED629000FAB94 /* popup.html */,
+				67FD90D4277ED629000FAB94 /* popup.css */,
+				67FD90D6277ED629000FAB94 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		67FD90E1277ED69A000FAB94 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				67FD90B2277ED5D8000FAB94 /* ContentView.swift */,
+				67FD90EA277ED746000FAB94 /* Edit */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		67FD90E3277ED6D1000FAB94 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				67FD90C4277ED629000FAB94 /* T2AutoLogin */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		67FD90EA277ED746000FAB94 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				67FD90E8277ED73E000FAB94 /* EditView.swift */,
+				67FD90EB277ED760000FAB94 /* EditMatrixView.swift */,
+				67FD90ED277ED76E000FAB94 /* EditMatrixRowView.swift */,
+			);
+			path = Edit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,15 +199,34 @@
 				67FD90A9277ED5D8000FAB94 /* Sources */,
 				67FD90AA277ED5D8000FAB94 /* Frameworks */,
 				67FD90AB277ED5D8000FAB94 /* Resources */,
+				67FD90E0277ED629000FAB94 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				67FD90DA277ED629000FAB94 /* PBXTargetDependency */,
 			);
 			name = T2Extension;
 			productName = T2Extension;
 			productReference = 67FD90AD277ED5D8000FAB94 /* T2Extension.app */;
 			productType = "com.apple.product-type.application";
+		};
+		67FD90C2277ED629000FAB94 /* T2AutoLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 67FD90DD277ED629000FAB94 /* Build configuration list for PBXNativeTarget "T2AutoLogin" */;
+			buildPhases = (
+				67FD90BF277ED629000FAB94 /* Sources */,
+				67FD90C0277ED629000FAB94 /* Frameworks */,
+				67FD90C1277ED629000FAB94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = T2AutoLogin;
+			productName = T2AutoLogin;
+			productReference = 67FD90C3277ED629000FAB94 /* T2AutoLogin.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +239,9 @@
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					67FD90AC277ED5D8000FAB94 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					67FD90C2277ED629000FAB94 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -116,6 +260,7 @@
 			projectRoot = "";
 			targets = (
 				67FD90AC277ED5D8000FAB94 /* T2Extension */,
+				67FD90C2277ED629000FAB94 /* T2AutoLogin */,
 			);
 		};
 /* End PBXProject section */
@@ -125,8 +270,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67FD90B8277ED5DE000FAB94 /* Preview Assets.xcassets in Resources */,
+				67A3A19E277EE47100A70F65 /* Preview Content in Resources */,
 				67FD90B5277ED5DE000FAB94 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FD90C1277ED629000FAB94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FD90CF277ED629000FAB94 /* background.js in Resources */,
+				67FD90D5277ED629000FAB94 /* popup.css in Resources */,
+				67FD90D3277ED629000FAB94 /* popup.html in Resources */,
+				67FD90CB277ED629000FAB94 /* images in Resources */,
+				67FD90CD277ED629000FAB94 /* manifest.json in Resources */,
+				67FD90C9277ED629000FAB94 /* _locales in Resources */,
+				67FD90D1277ED629000FAB94 /* content.js in Resources */,
+				67FD90D7277ED629000FAB94 /* popup.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,11 +298,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				67FD90B3277ED5D8000FAB94 /* ContentView.swift in Sources */,
+				67FD90EC277ED760000FAB94 /* EditMatrixView.swift in Sources */,
+				67FD90F0277ED7E0000FAB94 /* UserDefaults.swift in Sources */,
 				67FD90B1277ED5D8000FAB94 /* T2ExtensionApp.swift in Sources */,
+				67FD90EE277ED76E000FAB94 /* EditMatrixRowView.swift in Sources */,
+				67FD90E9277ED73E000FAB94 /* EditView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		67FD90BF277ED629000FAB94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67FD90F1277ED7E0000FAB94 /* UserDefaults.swift in Sources */,
+				67FD90C6277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		67FD90DA277ED629000FAB94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 67FD90C2277ED629000FAB94 /* T2AutoLogin */;
+			targetProxy = 67FD90D9277ED629000FAB94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		67FD90B9277ED5DE000FAB94 /* Debug */ = {
@@ -196,7 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -251,7 +432,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -264,8 +445,10 @@
 		67FD90BC277ED5DE000FAB94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = T2Extension/T2Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"T2Extension/Preview Content\"";
@@ -275,8 +458,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -284,17 +469,21 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.sheat.T2Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
 		67FD90BD277ED5DE000FAB94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = T2Extension/T2Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"T2Extension/Preview Content\"";
@@ -304,8 +493,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -313,9 +504,77 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.sheat.T2Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Release;
+		};
+		67FD90DE277ED629000FAB94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CC2UWUR3MQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = T2AutoLogin;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.sheat.T2Extension.T2AutoLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
+			};
+			name = Debug;
+		};
+		67FD90DF277ED629000FAB94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CC2UWUR3MQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = T2AutoLogin;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = tokyo.sheat.T2Extension.T2AutoLogin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
@@ -336,6 +595,15 @@
 			buildConfigurations = (
 				67FD90BC277ED5DE000FAB94 /* Debug */,
 				67FD90BD277ED5DE000FAB94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		67FD90DD277ED629000FAB94 /* Build configuration list for PBXNativeTarget "T2AutoLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				67FD90DE277ED629000FAB94 /* Debug */,
+				67FD90DF277ED629000FAB94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
