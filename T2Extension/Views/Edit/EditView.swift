@@ -8,22 +8,31 @@
 import SwiftUI
 
 struct EditView: View {
+    
+    @Binding var editMode: Bool
+    
     @AppStorage("Account", store: UserDefaults.T2E) private var account = ""
     @AppStorage("Password", store: UserDefaults.T2E) private var password = ""
     
     var body: some View {
-        Form {
-            Section(header: Text("Account")) {
-                TextField("Account", text: $account)
-                SecureField("Password", text: $password)
+        VStack {
+            Form {
+                Section(header: Text("Account")) {
+                    TextField("Account", text: $account)
+                    SecureField("Password", text: $password)
+                }
+                .textInputAutocapitalization(.never)
+                .keyboardType(.asciiCapable)
+                
+                EditMatrixView()
             }
-            EditMatrixView()
+            Button("\(Image(systemName: "checkmark.circle")) done") {
+                editMode = false
+            }
+            .buttonStyle(BorderedCapsuleButtonStyle())
+            
+            Spacer()
         }
-    }
-}
-
-struct EditView_Previews: PreviewProvider {
-    static var previews: some View {
-        EditView()
+        .background(Color.systemGroupedBackground)
     }
 }

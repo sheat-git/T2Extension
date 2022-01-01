@@ -40,7 +40,7 @@ struct CardBackView: View {
                     Text("You do so at your own risk.")
                         .padding(.leading, geometry.size.width/40)
                 }
-                .font(.system(size: 7))
+                .font(.system(size: geometry.size.height/28))
                 
                 Spacer()
             }

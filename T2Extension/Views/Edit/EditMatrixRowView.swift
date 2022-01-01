@@ -15,6 +15,8 @@ struct EditMatrixRowView: View {
         ZStack(alignment: .trailing) {
             TextField("Row \(num)", text: $row)
                 .font(.system(.body, design: .monospaced))
+                .textInputAutocapitalization(.never)
+                .keyboardType(.asciiCapable)
             Text("\(row.count)/10")
                 .font(.footnote)
                 .foregroundColor((row.count == 10) ? .primary : .red)

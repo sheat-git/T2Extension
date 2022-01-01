@@ -40,7 +40,7 @@ struct EditMatrixView: View {
             }
         }
         .alert(alertTitle, isPresented: $showAlert) {
-            Button("close"){}
+            Button("Close"){}
         } message: {
             Text(alertMessage)
         }

@@ -25,8 +25,10 @@ struct CardFrontView: View {
                     
                     VStack(alignment: .leading) {
                         Text("T2Extension")
+                            .lineLimit(1)
                             .font(.system(size: geometry.size.height/10, weight: .bold, design: .default))
                         Text("for Tokyo Institute of Technology")
+                            .lineLimit(1)
                             .font(.system(size: geometry.size.height/20, weight: .regular, design: .serif))
                     }
                     .foregroundColor(.systemBackground)

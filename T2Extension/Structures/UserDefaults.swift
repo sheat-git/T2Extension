@@ -8,9 +8,7 @@
 import Foundation
 
 extension UserDefaults {
-    
     static var T2E: Self {
         return Self.init(suiteName: "group.tokyo.sheat.T2Extension")!
     }
-    
 }
