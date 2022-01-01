@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "T2AutoLogin",
+        "description": "The display name for the extension."
+    },
+    "extension_description": {
+        "message": "This is T2AutoLogin. You should tell us what your extension does here.",
+        "description": "Description of what the extension does."
+    }
+}

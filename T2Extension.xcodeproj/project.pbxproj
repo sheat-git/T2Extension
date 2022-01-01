@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		670A3F03277F0E0800CE5338 /* CardFrontView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F02277F0E0800CE5338 /* CardFrontView.swift */; };
+		670A3F05277F0E1E00CE5338 /* CardBackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F04277F0E1E00CE5338 /* CardBackView.swift */; };
+		670A3F07277F17D300CE5338 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F06277F17D300CE5338 /* Color.swift */; };
+		670A3F0B277F2FBE00CE5338 /* CardBackMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F0A277F2FBE00CE5338 /* CardBackMatrixView.swift */; };
+		670A3F0D277F559000CE5338 /* CardBackMatrixRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F0C277F559000CE5338 /* CardBackMatrixRowView.swift */; };
 		67A3A19E277EE47100A70F65 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 67A3A19D277EE47100A70F65 /* Preview Content */; };
 		67FD90B1277ED5D8000FAB94 /* T2ExtensionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90B0277ED5D8000FAB94 /* T2ExtensionApp.swift */; };
 		67FD90B3277ED5D8000FAB94 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90B2277ED5D8000FAB94 /* ContentView.swift */; };
@@ -53,6 +58,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		670A3F02277F0E0800CE5338 /* CardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontView.swift; sourceTree = "<group>"; };
+		670A3F04277F0E1E00CE5338 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
+		670A3F06277F17D300CE5338 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		670A3F0A277F2FBE00CE5338 /* CardBackMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackMatrixView.swift; sourceTree = "<group>"; };
+		670A3F0C277F559000CE5338 /* CardBackMatrixRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackMatrixRowView.swift; sourceTree = "<group>"; };
 		67A3A19D277EE47100A70F65 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Preview Content"; path = "../../../.Trash/Preview Content"; sourceTree = "<group>"; };
 		67A3A1A0277EE48700A70F65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67FD90AD277ED5D8000FAB94 /* T2Extension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = T2Extension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +114,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		67E42B2227807B1C00680C85 /* Card */ = {
+			isa = PBXGroup;
+			children = (
+				670A3F02277F0E0800CE5338 /* CardFrontView.swift */,
+				670A3F04277F0E1E00CE5338 /* CardBackView.swift */,
+				670A3F0A277F2FBE00CE5338 /* CardBackMatrixView.swift */,
+				670A3F0C277F559000CE5338 /* CardBackMatrixRowView.swift */,
+			);
+			path = Card;
+			sourceTree = "<group>";
+		};
 		67FD90A4277ED5D8000FAB94 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +149,7 @@
 				67A3A19F277EE48700A70F65 /* Preview Content */,
 				67FD90B0277ED5D8000FAB94 /* T2ExtensionApp.swift */,
 				67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */,
+				670A3F06277F17D300CE5338 /* Color.swift */,
 				67FD90BE277ED5EA000FAB94 /* T2Extension.entitlements */,
 				67FD90B4277ED5DE000FAB94 /* Assets.xcassets */,
 				67FD90E1277ED69A000FAB94 /* Views */,
@@ -167,6 +189,7 @@
 			children = (
 				67FD90B2277ED5D8000FAB94 /* ContentView.swift */,
 				67FD90EA277ED746000FAB94 /* Edit */,
+				67E42B2227807B1C00680C85 /* Card */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,10 +322,15 @@
 			files = (
 				67FD90B3277ED5D8000FAB94 /* ContentView.swift in Sources */,
 				67FD90EC277ED760000FAB94 /* EditMatrixView.swift in Sources */,
+				670A3F0B277F2FBE00CE5338 /* CardBackMatrixView.swift in Sources */,
 				67FD90F0277ED7E0000FAB94 /* UserDefaults.swift in Sources */,
+				670A3F05277F0E1E00CE5338 /* CardBackView.swift in Sources */,
 				67FD90B1277ED5D8000FAB94 /* T2ExtensionApp.swift in Sources */,
+				670A3F0D277F559000CE5338 /* CardBackMatrixRowView.swift in Sources */,
+				670A3F03277F0E0800CE5338 /* CardFrontView.swift in Sources */,
 				67FD90EE277ED76E000FAB94 /* EditMatrixRowView.swift in Sources */,
 				67FD90E9277ED73E000FAB94 /* EditView.swift in Sources */,
+				670A3F07277F17D300CE5338 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

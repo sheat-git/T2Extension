@@ -11,7 +11,10 @@ import SwiftUI
 struct T2ExtensionApp: App {
     var body: some Scene {
         WindowGroup {
-            EditView()
+            VStack {
+                CardFrontView()
+                CardBackMatrixView()
+            }
         }
     }
 }
