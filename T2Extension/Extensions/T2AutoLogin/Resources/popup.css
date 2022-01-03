@@ -35,9 +35,13 @@ body.iPhone {
     width: 100%;
 }
 
-h1 {
-  margin: 0 20px;
-  padding: 0 0 14px;
+h1:not(.iPhone) {
+    margin: 0 20px;
+    padding: 0 0 14px;
+}
+
+body.iPhone h1 {
+    display: none;
 }
 
 .list {
