@@ -10,8 +10,10 @@ function autoLogin() {
             if (document.getElementsByTagName('td')[1].textContent.includes('account')) {
                 const account = document.getElementsByName('usr_name')[0];
                 const password = document.getElementsByName('usr_password')[0];
-                Promise.all([promise1('Account', account), promise1('Password', password)]).then(() => {
+                Promise.all([promiseGetUD1('Account', account), promiseGetUD1('Password', password)]).then(() => {
                     login.click();
+                }).catch(() => {
+                    ;
                 });
             } else {
                 const element1 = document.getElementsByName('message3')[0];
@@ -23,8 +25,10 @@ function autoLogin() {
                     promise(document.getElementsByTagName('th'), [4, 6, 8]);
                 }
                 function promise(rawLocations, index) {
-                    Promise.all([promise2(rawLocations.item(index[0]), element1), promise2(rawLocations.item(index[1]), element2), promise2(rawLocations.item(index[2]), element3)]).then(() => {
+                    Promise.all([promiseGetUD2(rawLocations.item(index[0]), element1), promiseGetUD2(rawLocations.item(index[1]), element2), promiseGetUD2(rawLocations.item(index[2]), element3)]).then(() => {
                         login.click();
+                    }).catch(() => {
+                        ;
                     });
                 }
             }
@@ -32,22 +36,34 @@ function autoLogin() {
     }
 }
 
-function promise1(key, element) {
+function promiseGetUD1(key, element) {
     return new Promise((resolve, reject) => {
-        browser.runtime.sendMessage(key).then((response) => {
-            element.value = response;
-            resolve();
+        browser.runtime.sendMessage(["getUD", key]).then((response) => {
+            if (response == undefined) {
+                reject();
+            } else if (response == "") {
+                reject();
+            } else {
+                element.value = response;
+                resolve();
+            }
         })
     })
 }
 
-function promise2(locationElement, inputElement) {
+function promiseGetUD2(locationElement, inputElement) {
     const content = locationElement.textContent
     return new Promise((resolve, reject) => {
         const rowNum = content.match(/[0-9]/g)[0];
-        browser.runtime.sendMessage(`Row${rowNum}`).then((response) => {
-            inputElement.value = response.charAt(content.match(/[A-Z]/g)[0].charCodeAt(0) - 65);
-            resolve();
+        browser.runtime.sendMessage(["getUD", `Row${rowNum}`]).then((response) => {
+            if (response == undefined) {
+                reject();
+            } else if (response == "") {
+                reject();
+            } else {
+                inputElement.value = response.charAt(content.match(/[A-Z]/g)[0].charCodeAt(0) - 65);
+                resolve();
+            }
         })
     })
 }

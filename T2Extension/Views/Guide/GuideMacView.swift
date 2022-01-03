@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct GuideMacView: View {
+    
     @Binding var guideMode: Bool
+    @State private var subGuideMode = false
     
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 Spacer()
+                
                 ScrollView {
                     VStack {
                         VStack(alignment: .leading, spacing: 10) {
@@ -29,21 +32,38 @@ struct GuideMacView: View {
                             Text("5. Done if it likes below")
                         }
                         .lineLimit(nil)
-                        .frame(width: geometry.size.width)
+                        .frame(width: geometry.size.width*0.7, alignment: .leading)
                         
                         Image("GuideMac-Extensions_done")
                             .resizable()
                             .scaledToFit()
                             .frame(width: geometry.size.width*0.7)
                     }
+                    .frame(width: geometry.size.width)
                 }
+                
+                Button("\(Image(systemName: "questionmark.circle")) how to fill Matrix Code") {
+                    subGuideMode = true
+                }
+                .buttonStyle(BorderedCapsuleButtonStyle())
                 
                 Button("\(Image(systemName: "arrowshape.turn.up.backward.circle")) back") {
                     guideMode = false
                 }
-                .buttonStyle(BorderedCapsuleButtonStyle())
+                .buttonStyle(CapsuleButtonStyle())
                 Spacer()
             }
         }
+        .navigate(to: GuideEditView(guideMode: $subGuideMode), when: $subGuideMode)
     }
+}
+
+struct GuideMacView_Previews: PreviewProvider {
+    
+    @State static var guideMode = true
+    
+    static var previews: some View {
+        GuideMacView(guideMode: $guideMode)
+    }
+    
 }

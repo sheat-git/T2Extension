@@ -23,3 +23,13 @@ struct EditMatrixRowView: View {
         }
     }
 }
+
+struct EditMatrixRowView_Previews: PreviewProvider {
+    
+    @State static var row = String.randomUppercase(length: 9)
+    
+    static var previews: some View {
+        EditMatrixRowView(row: $row, num: 1)
+    }
+    
+}

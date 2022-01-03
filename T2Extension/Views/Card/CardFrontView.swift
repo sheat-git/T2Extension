@@ -9,8 +9,8 @@ import SwiftUI
 
 struct CardFrontView: View {
     
-    @AppStorage("Account", store: UserDefaults.T2E) private var account: String = ""
-    @AppStorage("Password", store: UserDefaults.T2E) private var password: String = ""
+    @Binding var account: String
+    @Binding var password: String
     
     var body: some View {
         GeometryReader { geometry in
@@ -82,9 +82,21 @@ struct CardFrontView: View {
     }
 }
 
+struct _CardFrontView: View {
+    @AppStorage("Account") private var account = ""
+    @AppStorage("Password") private var password = ""
+    var body: some View {
+        CardFrontView(account: $account, password: $password)
+    }
+}
+
 struct CardFrontView_Previews: PreviewProvider {
+    
+    @State static var account = "20B00000"
+    @State static var password = "abcd1234"
+    
     static var previews: some View {
-        CardFrontView()
+        CardFrontView(account: $account, password: $password)
             .frame(width: 300, height: 200)
             .shadow(color: .secondary, radius: 20)
     }

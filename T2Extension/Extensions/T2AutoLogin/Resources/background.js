@@ -1,6 +1,15 @@
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    browser.runtime.sendNativeMessage('application.id', { message: request }, response => {
-        sendResponse(response);
-    });
-    return true;
+    switch(request[0]) {
+        case "getUD":
+            browser.runtime.sendNativeMessage('application.id', { message: request }, response => {
+                sendResponse(response);
+            });
+            return true;
+            break;
+        case "openURL":
+            browser.tabs.create({
+                url: request[1]
+            });
+            break;
+    }
 });

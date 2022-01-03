@@ -18,7 +18,7 @@ struct CapsuleButtonStyle: ButtonStyle {
         configuration.label
             .padding()
             .background(self.isEnabled ? Color.accentColor : Color.gray)
-            .foregroundColor(.white)
+            .foregroundColor(.systemBackground)
             .font(.body.bold())
             .clipShape(Capsule())
             .scaleEffect(configuration.isPressed ? 0.95 : 1)

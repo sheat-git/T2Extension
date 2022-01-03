@@ -9,13 +9,13 @@ import SwiftUI
 
 struct EditMatrixView: View {
     
-    @AppStorage("Row1", store: UserDefaults.T2E) private var row1 = ""
-    @AppStorage("Row2", store: UserDefaults.T2E) private var row2 = ""
-    @AppStorage("Row3", store: UserDefaults.T2E) private var row3 = ""
-    @AppStorage("Row4", store: UserDefaults.T2E) private var row4 = ""
-    @AppStorage("Row5", store: UserDefaults.T2E) private var row5 = ""
-    @AppStorage("Row6", store: UserDefaults.T2E) private var row6 = ""
-    @AppStorage("Row7", store: UserDefaults.T2E) private var row7 = ""
+    @Binding var row1: String
+    @Binding var row2: String
+    @Binding var row3: String
+    @Binding var row4: String
+    @Binding var row5: String
+    @Binding var row6: String
+    @Binding var row7: String
     
     @State private var alertTitle = ""
     @State private var alertMessage = ""
@@ -31,11 +31,11 @@ struct EditMatrixView: View {
             EditMatrixRowView(row: $row6, num: 6)
             EditMatrixRowView(row: $row7, num: 7)
             Button("Import") {
-                matrixImport()
+                self.matrixImport()
                 showAlert = true
             }
             Button("Export") {
-                matrixExport()
+                self.matrixExport()
                 showAlert = true
             }
         }
@@ -106,9 +106,18 @@ struct EditMatrixView: View {
 }
 
 struct EditMatrixView_Previews: PreviewProvider {
+    
+    @State static var row1: String = String.randomUppercase(length: 10)
+    @State static var row2: String = String.randomUppercase(length: 10)
+    @State static var row3: String = String.randomUppercase(length: 10)
+    @State static var row4: String = String.randomUppercase(length: 10)
+    @State static var row5: String = String.randomUppercase(length: 10)
+    @State static var row6: String = String.randomUppercase(length: 10)
+    @State static var row7: String = String.randomUppercase(length: 10)
+    
     static var previews: some View {
         Form {
-            EditMatrixView()
+            EditMatrixView(row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7)
         }
     }
 }
