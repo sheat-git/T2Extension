@@ -27,11 +27,11 @@ body {
     color: var(--primary);
 }
 
-body.iPad {
+body.iPad,body.mac {
     width: 420px;
 }
 
-body:not(.iPad) {
+body.iPhone {
     width: 100%;
 }
 
