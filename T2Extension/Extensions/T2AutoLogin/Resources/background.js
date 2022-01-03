@@ -1,8 +1,11 @@
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     switch(request[0]) {
         case "getUD":
-            browser.runtime.sendNativeMessage('application.id', { message: request }, response => {
+            const sendNM = browser.runtime.sendNativeMessage('application.id', { message: request });
+            sendNM.then((response) => {
                 sendResponse(response);
+            }, (error) => {
+                console.log(error);
             });
             return true;
             break;
