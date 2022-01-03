@@ -12,6 +12,7 @@
 		670A3F07277F17D300CE5338 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F06277F17D300CE5338 /* Color.swift */; };
 		670A3F0B277F2FBE00CE5338 /* CardBackMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F0A277F2FBE00CE5338 /* CardBackMatrixView.swift */; };
 		670A3F0D277F559000CE5338 /* CardBackMatrixRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F0C277F559000CE5338 /* CardBackMatrixRowView.swift */; };
+		677D963C2783535D00026187 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 677D963B2783535D00026187 /* fonts */; };
 		679802D02781691800112AF4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802CF2781691800112AF4 /* String.swift */; };
 		679802D22781894300112AF4 /* GuideEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802D12781894300112AF4 /* GuideEditView.swift */; };
 		67A3A19E277EE47100A70F65 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 67A3A19D277EE47100A70F65 /* Preview Content */; };
@@ -70,10 +71,10 @@
 		670A3F06277F17D300CE5338 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		670A3F0A277F2FBE00CE5338 /* CardBackMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackMatrixView.swift; sourceTree = "<group>"; };
 		670A3F0C277F559000CE5338 /* CardBackMatrixRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackMatrixRowView.swift; sourceTree = "<group>"; };
+		677D963B2783535D00026187 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = fonts; path = ../../../../../../../Downloads/fonts; sourceTree = "<group>"; };
 		67878EC42781F85B00E5C9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		679802CF2781691800112AF4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		679802D12781894300112AF4 /* GuideEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideEditView.swift; sourceTree = "<group>"; };
-		679E015C2782E90B00F86375 /* Dots.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Dots.ttf; sourceTree = "<group>"; };
 		67A3A19D277EE47100A70F65 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Preview Content"; path = "../../../.Trash/Preview Content"; sourceTree = "<group>"; };
 		67A3A1A0277EE48700A70F65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67E42B2327809CDA00680C85 /* CardFlippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlippingView.swift; sourceTree = "<group>"; };
@@ -122,14 +123,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		679E015D2782E92500F86375 /* fonts */ = {
-			isa = PBXGroup;
-			children = (
-				679E015C2782E90B00F86375 /* Dots.ttf */,
-			);
-			path = fonts;
-			sourceTree = "<group>";
-		};
 		67A3A19F277EE48700A70F65 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,7 +214,7 @@
 			children = (
 				67FD90C8277ED629000FAB94 /* _locales */,
 				67FD90CA277ED629000FAB94 /* images */,
-				679E015D2782E92500F86375 /* fonts */,
+				677D963B2783535D00026187 /* fonts */,
 				67FD90CC277ED629000FAB94 /* manifest.json */,
 				67FD90CE277ED629000FAB94 /* background.js */,
 				67FD90D0277ED629000FAB94 /* content.js */,
@@ -357,6 +350,7 @@
 				67FD90CB277ED629000FAB94 /* images in Resources */,
 				67FD90CD277ED629000FAB94 /* manifest.json in Resources */,
 				67FD90C9277ED629000FAB94 /* _locales in Resources */,
+				677D963C2783535D00026187 /* fonts in Resources */,
 				67FD90D1277ED629000FAB94 /* content.js in Resources */,
 				67FD90D7277ED629000FAB94 /* popup.js in Resources */,
 			);
