@@ -69,3 +69,8 @@ body.iPhone h1 {
     align-items: center;
 }
 
+.btn:hover {
+    color: var(--custome-skyblue);
+    border: 3px solid var(--custome-skyblue);
+}
+
