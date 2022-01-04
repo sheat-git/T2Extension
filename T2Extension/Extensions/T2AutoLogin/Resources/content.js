@@ -16,9 +16,14 @@ function autoLogin() {
                 dotsFontLoad()
                 .then(disableAutocomplete(password))
                 .then(() => {
-                    Promise.all([getUD1('Account', account), getUD1('Password', password)]).then(() => {
+                    Promise.allSettled([getUD1andSet('Account', account), getUD1andSet('Password', password)]).then(() => {
                         login.click();
-                    }).catch(() => {;});
+                    }).catch((error) => {
+                        console.log(error);
+                        Promise.all([getUD1andSet('Account', account), getUD1andSet('Password', password)]).then(() => {
+                            login.click();
+                        });
+                    });
                 })
                 .catch(() => {;});
             } else {
@@ -37,22 +42,26 @@ function autoLogin() {
                 })
                 .catch(() => {;});
                 function matrix(rawLocations, index) {
-                    return Promise.all([getUD2(rawLocations.item(index[0]), element1), getUD2(rawLocations.item(index[1]), element2), getUD2(rawLocations.item(index[2]), element3)]).then(() => {
+                    return Promise.allSettled([getUD2andSet(rawLocations.item(index[0]), element1), getUD2andSet(rawLocations.item(index[1]), element2), getUD2andSet(rawLocations.item(index[2]), element3)]).then(() => {
                         login.click();
-                    }).catch(() => {;});
+                    }).catch((error) => {
+                        console.log(error);
+                        matrix(rawLocations, index);
+                    });
                 }
             }
             break;
     }
 }
 
-function getUD1(key, element) {
+function getUD1andSet(key, element) {
     return new Promise((resolve, reject) => {
-        browser.runtime.sendMessage(["getUD", key]).then((response) => {
+        window.setTimeout(reject, 500, 'runtimeError');
+        browser.runtime.sendMessage(['getUD', key]).then((response) => {
             if (response == undefined) {
-                reject();
-            } else if (response == "") {
-                reject();
+                reject('responseError');
+            } else if (response == '') {
+                reject('responseError');
             } else {
                 element.value = response;
                 resolve();
@@ -61,13 +70,14 @@ function getUD1(key, element) {
     });
 }
 
-function getUD2(locationElement, inputElement) {
+function getUD2andSet(locationElement, inputElement) {
     return new Promise((resolve, reject) => {
-        browser.runtime.sendMessage(["getUD", `Row${locationElement.textContent.match(/[0-9]/g)[0]}`]).then((response) => {
+        window.setTimeout(reject, 500, 'runtimeError');
+        browser.runtime.sendMessage(['getUD', `Row${locationElement.textContent.match(/[0-9]/g)[0]}`]).then((response) => {
             if (response == undefined) {
-                reject();
-            } else if (response == "") {
-                reject();
+                reject('responseError');
+            } else if (response == '') {
+                reject('responseError');
             } else {
                 inputElement.value = response.charAt(locationElement.textContent.match(/[A-Z]/g)[0].charCodeAt(0) - 65);
                 resolve();
