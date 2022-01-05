@@ -46,7 +46,9 @@ function autoLogin() {
                         login.click();
                     }).catch((error) => {
                         console.log(error);
-                        matrix(rawLocations, index);
+                        Promise.all([getUD2andSet(rawLocations.item(index[0]), element1), getUD2andSet(rawLocations.item(index[1]), element2), getUD2andSet(rawLocations.item(index[2]), element3)]).then(() => {
+                            login.click();
+                        });
                     });
                 }
             }
