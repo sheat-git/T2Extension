@@ -15,7 +15,6 @@
 		6794FFC4278474C7008E0A67 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 6794FFC3278474C7008E0A67 /* fonts */; };
 		679802D02781691800112AF4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802CF2781691800112AF4 /* String.swift */; };
 		679802D22781894300112AF4 /* GuideEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802D12781894300112AF4 /* GuideEditView.swift */; };
-		67A3A19E277EE47100A70F65 /* Preview Content in Resources */ = {isa = PBXBuildFile; fileRef = 67A3A19D277EE47100A70F65 /* Preview Content */; };
 		67E42B2427809CDA00680C85 /* CardFlippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E42B2327809CDA00680C85 /* CardFlippingView.swift */; };
 		67E42B262780A40800680C85 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E42B252780A40800680C85 /* View.swift */; };
 		67E42B292780A76800680C85 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E42B282780A76800680C85 /* ButtonStyle.swift */; };
@@ -75,7 +74,6 @@
 		6794FFC3278474C7008E0A67 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		679802CF2781691800112AF4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		679802D12781894300112AF4 /* GuideEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideEditView.swift; sourceTree = "<group>"; };
-		67A3A19D277EE47100A70F65 /* Preview Content */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Preview Content"; path = "../../../.Trash/Preview Content"; sourceTree = "<group>"; };
 		67A3A1A0277EE48700A70F65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67E42B2327809CDA00680C85 /* CardFlippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlippingView.swift; sourceTree = "<group>"; };
 		67E42B252780A40800680C85 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
@@ -169,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				67FD90AF277ED5D8000FAB94 /* T2Extension */,
-				67A3A19D277EE47100A70F65 /* Preview Content */,
 				67FD90AE277ED5D8000FAB94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -335,7 +332,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67A3A19E277EE47100A70F65 /* Preview Content in Resources */,
 				67FD90B5277ED5DE000FAB94 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,7 +525,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = T2Extension/T2Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"T2Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				ENABLE_PREVIEWS = YES;
@@ -547,7 +543,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.sheat.T2Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -567,7 +563,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = T2Extension/T2Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"T2Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				ENABLE_PREVIEWS = YES;
@@ -585,7 +581,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.sheat.T2Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -601,7 +597,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
@@ -613,7 +609,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -634,7 +630,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
@@ -646,7 +642,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
