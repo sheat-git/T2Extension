@@ -49,7 +49,7 @@ struct HomeView: View {
                 Link("\(Image(systemName: "safari")) open Tokyo Tech Portal", destination: URL(string: "https://portal.titech.ac.jp")!)
                     .buttonStyle(BorderedCapsuleButtonStyle())
                 
-                Link("\(Image(systemName: "safari")) open T2Schola", destination: URL(string: "https://t2schola.titech.ac.jp/")!)
+                Link("\(Image(systemName: "safari")) open T2SCHOLA", destination: URL(string: "https://t2schola.titech.ac.jp/")!)
                     .buttonStyle(BorderedCapsuleButtonStyle())
                 
                 Spacer()
