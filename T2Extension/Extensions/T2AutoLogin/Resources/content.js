@@ -10,7 +10,7 @@ function autoLogin() {
                 console.log(lastLogin);
                 const now = new Date();
                 let nextLogin = new Date(lastLogin);
-                nextLogin.setSeconds(nextLogin.getSeconds() + 5);
+                nextLogin.setSeconds(nextLogin.getSeconds() + 2);
                 browser.runtime.sendMessage(['setDate']);
                 if (now < lastLogin || nextLogin < now) {
                     agreeButton.click();
@@ -27,11 +27,11 @@ function autoLogin() {
                 .then(disableAutocomplete(password))
                 .then(() => {
                     Promise.allSettled([getUD1andSet('Account', account), getUD1andSet('Password', password)]).then(() => {
-                        //login.click();
+                        login.click();
                     }).catch((error) => {
                         console.log(error);
                         Promise.all([getUD1andSet('Account', account), getUD1andSet('Password', password)]).then(() => {
-                            //login.click();
+                            login.click();
                         });
                     });
                 })
