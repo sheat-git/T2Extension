@@ -6,9 +6,19 @@ function autoLogin() {
         case '東工大ポータル':
         case 'Tokyo Tech Portal':
             const agreeButton = document.getElementsByTagName('input')[1];
-            agreeButton.click();
+            browser.runtime.sendMessage(['getDate']).then((lastLogin) => {
+                console.log(lastLogin);
+                const now = new Date();
+                let nextLogin = new Date(lastLogin);
+                nextLogin.setSeconds(nextLogin.getSeconds() + 5);
+                browser.runtime.sendMessage(['setDate']);
+                if (now < lastLogin || nextLogin < now) {
+                    agreeButton.click();
+                }
+            });
             break;
         case 'Entrust GetAccess':
+            browser.runtime.sendMessage(['setDate']);
             const login = document.getElementsByName('OK')[0];
             if (document.getElementsByTagName('td')[1].textContent.includes('account')) {
                 const account = document.getElementsByName('usr_name')[0];

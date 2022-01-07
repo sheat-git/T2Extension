@@ -36,5 +36,9 @@
         }
     },
 
-    "permissions": [ "https://*.titech.ac.jp/*", "nativeMessaging" ]
+    "permissions": [
+        "https://*.titech.ac.jp/*",
+        "nativeMessaging",
+        "storage"
+    ]
 }
