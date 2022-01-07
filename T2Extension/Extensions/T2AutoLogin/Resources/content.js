@@ -27,11 +27,11 @@ function autoLogin() {
                 .then(disableAutocomplete(password))
                 .then(() => {
                     Promise.allSettled([getUD1andSet('Account', account), getUD1andSet('Password', password)]).then(() => {
-                        login.click();
+                        //login.click();
                     }).catch((error) => {
                         console.log(error);
                         Promise.all([getUD1andSet('Account', account), getUD1andSet('Password', password)]).then(() => {
-                            login.click();
+                            //login.click();
                         });
                     });
                 })
@@ -100,8 +100,9 @@ function getUD2andSet(locationElement, inputElement) {
 
 function disableAutocomplete(element) {
     return new Promise((resolve, reject) => {
-        element.style.width = element.clientWidth;
-        element.style.height = element.clientHeight;
+        element.style.width = element.offsetWidth;
+        element.style.height = element.offsetHeight;
+        element.style.margin = "2px";
         element.style.fontFamily = '"Dots"';
         element.removeAttribute('placeholder');
         element.removeAttribute('ng-model');
