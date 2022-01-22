@@ -16,5 +16,6 @@ target 'T2Extension' do
 
   # Pods for T2Extension
   pod 'KeychainAccess'
+  pod 'LicensePlist'
 
 end

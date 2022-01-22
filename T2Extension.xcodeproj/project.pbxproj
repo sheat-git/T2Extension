@@ -16,6 +16,7 @@
 		679802D02781691800112AF4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802CF2781691800112AF4 /* String.swift */; };
 		679802D22781894300112AF4 /* GuideEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802D12781894300112AF4 /* GuideEditView.swift */; };
 		67D427BA279C5CAD00644EAA /* SecureAppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D427B9279C5CAD00644EAA /* SecureAppStorage.swift */; };
+		67D427BD279C647D00644EAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 67D427BC279C647D00644EAA /* Settings.bundle */; };
 		67E42B2427809CDA00680C85 /* CardFlippingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E42B2327809CDA00680C85 /* CardFlippingView.swift */; };
 		67E42B262780A40800680C85 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E42B252780A40800680C85 /* View.swift */; };
 		67E42B292780A76800680C85 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E42B282780A76800680C85 /* ButtonStyle.swift */; };
@@ -80,6 +81,7 @@
 		679802D12781894300112AF4 /* GuideEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideEditView.swift; sourceTree = "<group>"; };
 		67A3A1A0277EE48700A70F65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67D427B9279C5CAD00644EAA /* SecureAppStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAppStorage.swift; sourceTree = "<group>"; };
+		67D427BC279C647D00644EAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		67E42B2327809CDA00680C85 /* CardFlippingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlippingView.swift; sourceTree = "<group>"; };
 		67E42B252780A40800680C85 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		67E42B282780A76800680C85 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				67E42B272780A74500680C85 /* Structures */,
 				67FD90E1277ED69A000FAB94 /* Views */,
 				67FD90E3277ED6D1000FAB94 /* Extensions */,
+				67D427BC279C647D00644EAA /* Settings.bundle */,
 			);
 			path = T2Extension;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				67FD90AB277ED5D8000FAB94 /* Resources */,
 				67FD90E0277ED629000FAB94 /* Embed App Extensions */,
 				A6F64B03B60ABE6595C078AA /* [CP] Embed Pods Frameworks */,
+				67D427BB279C63F800644EAA /* LicensePlist */,
 			);
 			buildRules = (
 			);
@@ -370,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67D427BD279C647D00644EAA /* Settings.bundle in Resources */,
 				67FD90B5277ED5DE000FAB94 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +398,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		67D427BB279C63F800644EAA /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ $CONFIGURATION = \"Debug\" ]; then\n    ${PODS_ROOT}/LicensePlist/license-plist --output-path $PROJECT_NAME/Settings.bundle\nfi\n";
+		};
 		777E167B58802B62D6137D50 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
