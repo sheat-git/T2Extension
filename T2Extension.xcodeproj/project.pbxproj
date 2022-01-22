@@ -38,6 +38,8 @@
 		67FD90EE277ED76E000FAB94 /* EditMatrixRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90ED277ED76E000FAB94 /* EditMatrixRowView.swift */; };
 		67FD90F0277ED7E0000FAB94 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */; };
 		67FD90F1277ED7E0000FAB94 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */; };
+		9E4320A57614FF19EDD4B1FA /* Pods_T2AutoLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B2046B7AACA3CB528D8929 /* Pods_T2AutoLogin.framework */; };
+		E8AE7C62A1DD0649F5CF3363 /* Pods_T2Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E013538EABD83EEE73A7FD /* Pods_T2Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		52B2046B7AACA3CB528D8929 /* Pods_T2AutoLogin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T2AutoLogin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		670A3F02277F0E0800CE5338 /* CardFrontView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFrontView.swift; sourceTree = "<group>"; };
 		670A3F04277F0E1E00CE5338 /* CardBackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackView.swift; sourceTree = "<group>"; };
 		670A3F06277F17D300CE5338 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -101,6 +104,11 @@
 		67FD90EB277ED760000FAB94 /* EditMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatrixView.swift; sourceTree = "<group>"; };
 		67FD90ED277ED76E000FAB94 /* EditMatrixRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMatrixRowView.swift; sourceTree = "<group>"; };
 		67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		884F28388B59B1D98C6FA48D /* Pods-T2Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2Extension.release.xcconfig"; path = "Target Support Files/Pods-T2Extension/Pods-T2Extension.release.xcconfig"; sourceTree = "<group>"; };
+		ABA7EB6DFE171256F89CBC35 /* Pods-T2Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2Extension.debug.xcconfig"; path = "Target Support Files/Pods-T2Extension/Pods-T2Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		E5D5C5BE219DBC93729FD72D /* Pods-T2AutoLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2AutoLogin.debug.xcconfig"; path = "Target Support Files/Pods-T2AutoLogin/Pods-T2AutoLogin.debug.xcconfig"; sourceTree = "<group>"; };
+		F4E013538EABD83EEE73A7FD /* Pods_T2Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T2Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB26A69235251D9AB67EB591 /* Pods-T2AutoLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2AutoLogin.release.xcconfig"; path = "Target Support Files/Pods-T2AutoLogin/Pods-T2AutoLogin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8AE7C62A1DD0649F5CF3363 /* Pods_T2Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,12 +124,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4320A57614FF19EDD4B1FA /* Pods_T2AutoLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DC4F62A96A3B076270288F2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52B2046B7AACA3CB528D8929 /* Pods_T2AutoLogin.framework */,
+				F4E013538EABD83EEE73A7FD /* Pods_T2Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		67A3A19F277EE48700A70F65 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +187,8 @@
 			children = (
 				67FD90AF277ED5D8000FAB94 /* T2Extension */,
 				67FD90AE277ED5D8000FAB94 /* Products */,
+				BF5C8E88C8EE05F5F426DFF8 /* Pods */,
+				2DC4F62A96A3B076270288F2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,6 +272,18 @@
 			path = Edit;
 			sourceTree = "<group>";
 		};
+		BF5C8E88C8EE05F5F426DFF8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5D5C5BE219DBC93729FD72D /* Pods-T2AutoLogin.debug.xcconfig */,
+				FB26A69235251D9AB67EB591 /* Pods-T2AutoLogin.release.xcconfig */,
+				ABA7EB6DFE171256F89CBC35 /* Pods-T2Extension.debug.xcconfig */,
+				884F28388B59B1D98C6FA48D /* Pods-T2Extension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -258,10 +291,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67FD90BB277ED5DE000FAB94 /* Build configuration list for PBXNativeTarget "T2Extension" */;
 			buildPhases = (
+				8E877EE2933C06C095731CD7 /* [CP] Check Pods Manifest.lock */,
 				67FD90A9277ED5D8000FAB94 /* Sources */,
 				67FD90AA277ED5D8000FAB94 /* Frameworks */,
 				67FD90AB277ED5D8000FAB94 /* Resources */,
 				67FD90E0277ED629000FAB94 /* Embed App Extensions */,
+				A6F64B03B60ABE6595C078AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +312,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67FD90DD277ED629000FAB94 /* Build configuration list for PBXNativeTarget "T2AutoLogin" */;
 			buildPhases = (
+				777E167B58802B62D6137D50 /* [CP] Check Pods Manifest.lock */,
 				67FD90BF277ED629000FAB94 /* Sources */,
 				67FD90C0277ED629000FAB94 /* Frameworks */,
 				67FD90C1277ED629000FAB94 /* Resources */,
@@ -353,6 +389,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		777E167B58802B62D6137D50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-T2AutoLogin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8E877EE2933C06C095731CD7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-T2Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6F64B03B60ABE6595C078AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T2Extension/Pods-T2Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T2Extension/Pods-T2Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T2Extension/Pods-T2Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		67FD90A9277ED5D8000FAB94 /* Sources */ = {
@@ -518,6 +618,7 @@
 		};
 		67FD90BC277ED5DE000FAB94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABA7EB6DFE171256F89CBC35 /* Pods-T2Extension.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -556,6 +657,7 @@
 		};
 		67FD90BD277ED5DE000FAB94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 884F28388B59B1D98C6FA48D /* Pods-T2Extension.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -594,6 +696,7 @@
 		};
 		67FD90DE277ED629000FAB94 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5D5C5BE219DBC93729FD72D /* Pods-T2AutoLogin.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -627,6 +730,7 @@
 		};
 		67FD90DF277ED629000FAB94 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB26A69235251D9AB67EB591 /* Pods-T2AutoLogin.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
