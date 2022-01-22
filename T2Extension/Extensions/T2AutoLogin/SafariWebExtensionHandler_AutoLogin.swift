@@ -6,6 +6,7 @@
 //
 
 import SafariServices
+import KeychainAccess
 
 class SafariWebExtensionHandler_AutoLogin: NSObject, NSExtensionRequestHandling {
 
@@ -16,9 +17,33 @@ class SafariWebExtensionHandler_AutoLogin: NSObject, NSExtensionRequestHandling 
         let funcName: String = message[0]
         
         var response: NSExtensionItem
-        switch funcName {
-        case "getUD":
-            response = getUD(message: message)
+        let schemaVersion: Int = UserDefaults.T2E.object(forKey: "SchemaVersion") as? Int ?? 1
+        
+        switch schemaVersion {
+        case 1:
+            switch funcName {
+            case "getUD":
+                response = getUD(key: message[1])
+            case "getAccount":
+                response = getUD(key: "Account")
+            case "getPassword":
+                response = getUD(key: "Password")
+            case "getRow":
+                response = getUD(key: "Row\(message[1])")
+            default:
+                response = responceNil()
+            }
+        case 2:
+            switch funcName {
+            case "getAccount":
+                response = getKC(key: "Account")
+            case "getPassword":
+                response = getKC(key: "Password")
+            case "getRow":
+                response = getKC(key: "Row\(message[1])")
+            default:
+                response = responceNil()
+            }
         default:
             response = responceNil()
         }
@@ -32,9 +57,18 @@ class SafariWebExtensionHandler_AutoLogin: NSObject, NSExtensionRequestHandling 
         return response
     }
     
-    private func getUD(message: [String]) -> NSExtensionItem {
-        let key = message[1]
+    private func getUD(key: String) -> NSExtensionItem {
         let value: String? = UserDefaults.T2E.string(forKey: key)
+        
+        let response = NSExtensionItem()
+        response.userInfo = [ "message": value as Any ]
+        return response
+    }
+    
+    private func getKC(key: String) -> NSExtensionItem {
+        let keychain = Keychain(service: "tokyo.sheat.T2Extension", accessGroup: Bundle.main.infoDictionary!["AppIdentifierPrefix"] as! String + "T2AccountShareGroup")
+        
+        let value: String? = try? keychain.getString(key)
         
         let response = NSExtensionItem()
         response.userInfo = [ "message": value as Any ]
