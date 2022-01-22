@@ -73,7 +73,7 @@ function promiseAP(elementA, elementP) {
 }
 
 function promiseR(rawLocations, indexes, element1, element2, element3) {
-    return Promise.allSettled([getKCandSetRow(rawLocations.item(index[0]), element1), getKCandSetRow(rawLocations.item(index[1]), element2), getKCandSetRow(rawLocations.item(index[2]), element3)]);
+    return Promise.allSettled([getKCandSetRow(rawLocations.item(indexes[0]), element1), getKCandSetRow(rawLocations.item(indexes[1]), element2), getKCandSetRow(rawLocations.item(indexes[2]), element3)]);
 }
 
 function getKCandSet(funcName, element) {
