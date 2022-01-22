@@ -20,17 +20,18 @@ function autoLogin() {
         case 'Entrust GetAccess':
             browser.runtime.sendMessage(['setDate']);
             const login = document.getElementsByName('OK')[0];
+            
             if (document.getElementsByTagName('td')[1].textContent.includes('account')) {
                 const account = document.getElementsByName('usr_name')[0];
                 const password = document.getElementsByName('usr_password')[0];
                 dotsFontLoad()
                 .then(disableAutocomplete(password))
                 .then(() => {
-                    Promise.allSettled([getUD1andSet('Account', account), getUD1andSet('Password', password)]).then(() => {
+                    promiseAP(account, password).then(() => {
                         login.click();
                     }).catch((error) => {
                         console.log(error);
-                        Promise.all([getUD1andSet('Account', account), getUD1andSet('Password', password)]).then(() => {
+                        promiseAP(account, password).then(() => {
                             login.click();
                         });
                     });
@@ -51,12 +52,13 @@ function autoLogin() {
                     }
                 })
                 .catch(() => {;});
-                function matrix(rawLocations, index) {
-                    return Promise.allSettled([getUD2andSet(rawLocations.item(index[0]), element1), getUD2andSet(rawLocations.item(index[1]), element2), getUD2andSet(rawLocations.item(index[2]), element3)]).then(() => {
+                
+                function matrix(rawLocations, indexes) {
+                    return promiseR(rawLocations, indexes, element1, element2, element3).then(() => {
                         login.click();
                     }).catch((error) => {
                         console.log(error);
-                        Promise.all([getUD2andSet(rawLocations.item(index[0]), element1), getUD2andSet(rawLocations.item(index[1]), element2), getUD2andSet(rawLocations.item(index[2]), element3)]).then(() => {
+                        promiseR(rawLocations, indexes, element1, element2, element3).then(() => {
                             login.click();
                         });
                     });
@@ -66,10 +68,18 @@ function autoLogin() {
     }
 }
 
-function getUD1andSet(key, element) {
+function promiseAP(elementA, elementP) {
+    return Promise.allSettled([getKCandSet('getAccount', elementA), getKCandSet('getPassword', elementP)]);
+}
+
+function promiseR(rawLocations, indexes, element1, element2, element3) {
+    return Promise.allSettled([getKCandSetRow(rawLocations.item(index[0]), element1), getKCandSetRow(rawLocations.item(index[1]), element2), getKCandSetRow(rawLocations.item(index[2]), element3)]);
+}
+
+function getKCandSet(funcName, element) {
     return new Promise((resolve, reject) => {
         window.setTimeout(reject, 500, 'runtimeError');
-        browser.runtime.sendMessage(['getUD', key]).then((response) => {
+        browser.runtime.sendMessage([funcName]).then((response) => {
             if (response == undefined) {
                 reject('responseError');
             } else if (response == '') {
@@ -82,10 +92,11 @@ function getUD1andSet(key, element) {
     });
 }
 
-function getUD2andSet(locationElement, inputElement) {
+function getKCandSetRow(locationElement, inputElement) {
+    const rowNum = locationElement.textContent.match(/[0-9]/g)[0];
     return new Promise((resolve, reject) => {
         window.setTimeout(reject, 500, 'runtimeError');
-        browser.runtime.sendMessage(['getUD', `Row${locationElement.textContent.match(/[0-9]/g)[0]}`]).then((response) => {
+        browser.runtime.sendMessage(['getRow', rowNum]).then((response) => {
             if (response == undefined) {
                 reject('responseError');
             } else if (response == '') {

@@ -4,7 +4,9 @@ browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
             window.localStorage.setItem("lastLogin", JSON.stringify(new Date()));
         case "getDate":
             sendResponse(new Date(JSON.parse(window.localStorage.getItem("lastLogin"))));
-        case "getUD":
+        case "getAccount":
+        case "getPassword":
+        case "getRow":
             const sendNM = browser.runtime.sendNativeMessage('application.id', { message: request });
             sendNM.then((response) => {
                 sendResponse(response);
