@@ -12,16 +12,16 @@ struct HomeView: View {
     @State private var editMode = false
     @State private var guideMode = false
     
-    @AppStorage("Account", store: UserDefaults.T2E) private var account = ""
-    @AppStorage("Password", store: UserDefaults.T2E) private var password = ""
+    @SecureAppStorage("Account") private var account = ""
+    @SecureAppStorage("Password") private var password = ""
     
-    @AppStorage("Row1", store: UserDefaults.T2E) private var row1 = ""
-    @AppStorage("Row2", store: UserDefaults.T2E) private var row2 = ""
-    @AppStorage("Row3", store: UserDefaults.T2E) private var row3 = ""
-    @AppStorage("Row4", store: UserDefaults.T2E) private var row4 = ""
-    @AppStorage("Row5", store: UserDefaults.T2E) private var row5 = ""
-    @AppStorage("Row6", store: UserDefaults.T2E) private var row6 = ""
-    @AppStorage("Row7", store: UserDefaults.T2E) private var row7 = ""
+    @SecureAppStorage("Row1") private var row1 = ""
+    @SecureAppStorage("Row2") private var row2 = ""
+    @SecureAppStorage("Row3") private var row3 = ""
+    @SecureAppStorage("Row4") private var row4 = ""
+    @SecureAppStorage("Row5") private var row5 = ""
+    @SecureAppStorage("Row6") private var row6 = ""
+    @SecureAppStorage("Row7") private var row7 = ""
     
     var body: some View {
         GeometryReader { geometry in
