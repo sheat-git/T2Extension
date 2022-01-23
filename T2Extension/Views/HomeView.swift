@@ -34,7 +34,7 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                Button("\(Image(systemName: "creditcard.and.123")) edit Account") {
+                Button("\(Image(systemName: "pencil.circle")) edit Account") {
                     editMode = true
                 }
                 .buttonStyle(BorderedCapsuleButtonStyle())
