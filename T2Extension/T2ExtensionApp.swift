@@ -17,12 +17,12 @@ struct T2ExtensionApp: App {
         WindowGroup {
             HomeView()
                 .withHostingWindow { window in
-                            #if targetEnvironment(macCatalyst)
-                            if let titlebar = window?.windowScene?.titlebar {
-                                titlebar.titleVisibility = .hidden
-                                titlebar.toolbar = nil
-                            }
-                            #endif
+                    #if targetEnvironment(macCatalyst)
+                    if let titlebar = window?.windowScene?.titlebar {
+                        titlebar.titleVisibility = .hidden
+                        titlebar.toolbar = nil
+                    }
+                    #endif
                 }
         }
     }
@@ -65,6 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     #endif
 }
 
+// hide title bar for mac
 extension View {
     fileprivate func withHostingWindow(_ callback: @escaping (UIWindow?) -> Void) -> some View {
         self.background(HostingWindowFinder(callback: callback))
