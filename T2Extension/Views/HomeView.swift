@@ -25,37 +25,38 @@ struct HomeView: View {
     
     var body: some View {
         GeometryReader { geometry in
+            
+            let cardHeight = min(geometry.size.width*0.6, geometry.size.height*0.5)
+            let cardWidth = min(geometry.size.width*0.9, geometry.size.height*0.75)
+            
             VStack {
-                
-                Spacer()
+                HStack {
+                    Spacer()
+                    
+                    Button("\(Image(systemName: "questionmark.circle"))") {
+                        guideMode = true
+                    }
+                    .buttonStyle(GuideButtonStyle(fontStyle: .system(size: cardHeight/11, weight: .medium, design: .default)))
+                }
+                .frame(width: cardWidth)
+                .padding(.vertical, 5)
                 
                 CardFlippingView(account: $account, password: $password, row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7)
-                    .frame(width: min(geometry.size.width*0.9, geometry.size.height*0.75), height: min(geometry.size.width*0.6, geometry.size.height*0.5))
+                    .frame(width: cardWidth, height: cardHeight)
                 
-                Spacer()
-                
-                Button("\(Image(systemName: "pencil.circle")) edit Account") {
+                Button("\(Image(systemName: "pencil")) edit") {
                     editMode = true
                 }
-                .buttonStyle(BorderedCapsuleButtonStyle())
-                
-                Button("\(Image(systemName: "questionmark.circle")) see guide") {
-                    guideMode = true
-                }
-                .buttonStyle(BorderedCapsuleButtonStyle())
+                .buttonStyle(EditButtonStyle(fontStyle: .system(size: cardHeight/15, weight: .bold, design: .default), pH: cardHeight/30, pV: cardHeight/100))
+                .padding()
                 
                 Spacer()
                 
-                Link("\(Image(systemName: "safari")) open Tokyo Tech Portal", destination: URL(string: "https://portal.titech.ac.jp")!)
-                    .buttonStyle(BorderedCapsuleButtonStyle())
-                
-                Link("\(Image(systemName: "safari")) open T2SCHOLA", destination: URL(string: "https://t2schola.titech.ac.jp/")!)
-                    .buttonStyle(BorderedCapsuleButtonStyle())
-                
-                Spacer()
-                
+                LinksView()
+                    .frame(width: cardWidth, height: min(geometry.size.width*0.8, geometry.size.height*0.25))
+                    .padding(.bottom, min(geometry.size.width*0.8, geometry.size.height*0.25)/30)
             }
-            .frame(width: geometry.size.width)
+            .frame(width: geometry.size.width, height: geometry.size.height)
         }
         .navigate(to: EditView(editMode: $editMode, account: $account, password: $password, row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7), when: $editMode)
         #if targetEnvironment(macCatalyst)
