@@ -33,7 +33,7 @@ struct GuideView: View {
                 .padding(.top, padHeight*2)
                 
                 Text("Guide")
-                    .font(.system(size: cardHeight/5, weight: .bold, design: .default))
+                    .font(.system(size: cardHeight/6, weight: .bold, design: .default))
                     .frame(width: geometry.size.width*0.9, alignment: .leading)
                 
                 Picker("guideMode", selection: self.$selection) {

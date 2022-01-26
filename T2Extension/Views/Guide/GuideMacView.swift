@@ -29,12 +29,12 @@ struct GuideMacView: View {
                             Text("5. Done if it likes below")
                         }
                         .lineLimit(nil)
-                        .frame(width: geometry.size.width*0.7, alignment: .leading)
+                        .frame(width: geometry.size.width*0.9, alignment: .leading)
                         
                         Image("GuideMac-Extensions_done")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: geometry.size.width*0.7)
+                            .frame(width: geometry.size.width)
                     }
                     .frame(width: geometry.size.width)
                 }
