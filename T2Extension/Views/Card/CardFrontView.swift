@@ -19,7 +19,7 @@ struct CardFrontView: View {
                     Image("AppIconImage")
                         .resizable()
                         .frame(width: geometry.size.width/7.5, height: geometry.size.height/5)
-                        .foregroundColor(.accentColor)
+                        .foregroundColor(.letAccentColor)
                         .background(Color.systemBackground)
                         .cornerRadius(geometry.size.width/30)
                     
@@ -37,21 +37,21 @@ struct CardFrontView: View {
                 }
                 .padding(geometry.size.width/60)
                 .padding(.top, geometry.size.height/40)
-                .background(Color.accentColor)
+                .background(Color.letAccentColor)
                 
                 Rectangle()
                     .fill(Color.customSkyblue)
                     .frame(height: geometry.size.height/40)
                 
                 Rectangle()
-                    .fill(Color.accentColor)
+                    .fill(Color.letAccentColor)
                     .frame(height: geometry.size.height/40)
                 
                 HStack {
                     Image(systemName: "person")
                         .resizable()
                         .frame(width: geometry.size.width*11/30, height: geometry.size.height*11/20)
-                        .foregroundColor(.accentColor)
+                        .foregroundColor(.letAccentColor)
                     
                     Spacer()
                     

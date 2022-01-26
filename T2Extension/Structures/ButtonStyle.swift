@@ -50,8 +50,8 @@ struct EditButtonStyle: ButtonStyle {
             .font(fontStyle)
             .padding(.horizontal, pH)
             .padding(.vertical, pV)
-            .foregroundColor(configuration.isPressed ? .gray : .accentColor)
-            .overlay(Capsule().stroke(configuration.isPressed ? Color.gray : Color.accentColor, lineWidth: 2))
+            .foregroundColor(configuration.isPressed ? .gray : .letAccentColor)
+            .overlay(Capsule().stroke(configuration.isPressed ? Color.gray : Color.letAccentColor, lineWidth: 2))
     }
 }
 
@@ -62,36 +62,39 @@ struct GuideButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .font(fontStyle)
-            .foregroundColor(configuration.isPressed ? Color.gray : Color.accentColor)
+            .foregroundColor(configuration.isPressed ? Color.gray : Color.letAccentColor)
     }
 }
 
 struct LinkButtonStyle: ButtonStyle {
     
-    var fontStyle: Font?
-    var pH: CGFloat
-    var fH: CGFloat
+    var standardHeight: CGFloat
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(fontStyle)
+            .font(.system(size: standardHeight*2))
             .foregroundColor(.systemBackground)
-            .padding(.horizontal, pH)
-            .frame(height: fH)
-            .background(configuration.isPressed ? Color.gray : Color.accentColor)
+            .padding(.horizontal, standardHeight)
+            .frame(height: standardHeight*5)
+            .background(configuration.isPressed ? Color.gray : Color.letAccentColor)
             .clipShape(Capsule())
     }
 }
 
 struct SafariButtonStyle: ButtonStyle {
     
-    var height: CGFloat
+    var size: CGFloat
     
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .font(.system(size: height, weight: .medium, design: .default))
-            .foregroundColor(configuration.isPressed ? .gray : .accentColor)
-            .frame(height: height)
+        ZStack(alignment: .center) {
+            Circle()
+                .fill(Color.systemBackground)
+                .frame(width: size*0.9, height: size*0.9)
+            configuration.label
+                .font(.system(size: size))
+                .foregroundColor(configuration.isPressed ? .gray : .letAccentColor)
+                .frame(height: size)
+        }
     }
 }
 

@@ -28,7 +28,7 @@ struct CardBackView: View {
                     Image("IcTip")
                         .resizable()
                         .frame(width: geometry.size.width/5, height: geometry.size.height/4)
-                        .foregroundColor(.accentColor)
+                        .foregroundColor(.letAccentColor)
                     
                     Spacer()
                     

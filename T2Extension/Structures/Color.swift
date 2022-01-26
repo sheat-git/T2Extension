@@ -8,6 +8,7 @@
 import SwiftUI
 
 extension Color {
+    static let letAccentColor = Color("AccentColor")
     static let systemBackground = Color(uiColor: UIColor.systemBackground)
     static let secondarySystemBackground = Color(uiColor: UIColor.secondarySystemBackground)
     static let tertiarySystemBackground = Color(uiColor: UIColor.tertiarySystemBackground)

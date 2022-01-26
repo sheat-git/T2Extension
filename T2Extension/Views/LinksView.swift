@@ -16,25 +16,36 @@ struct LinksView: View {
             
             let standardHeight = geometry.size.height/17
             
-            VStack(alignment: .trailing, spacing: standardHeight) {
+            ZStack {
                 
-                Link("Tokyo Tech Portal", destination: URL(string: "https://portal.titech.ac.jp")!)
-                    .buttonStyle(LinkButtonStyle(fontStyle: .system(size: standardHeight*2, weight: .medium, design: .default), pH: standardHeight, fH: standardHeight*5))
-                    .opacity(showLinks ? 1 : 0)
-                    .animation(.default, value: showLinks)
+                Button("Tokyo Tech Poral") {
+                    showLinks = false
+                    UIApplication.shared.open(URL(string: "https://portal.titech.ac.jp")!)
+                }
+                .buttonStyle(LinkButtonStyle(standardHeight: standardHeight))
+                .opacity(showLinks ? 1 : 0)
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: showLinks ? .topTrailing : .bottomTrailing)
+                .compositingGroup()
                 
-                Link("T2SCHOLA", destination: URL(string: "https://t2schola.titech.ac.jp/")!)
-                    .buttonStyle(LinkButtonStyle(fontStyle: .system(size: standardHeight*2, weight: .medium, design: .default), pH: standardHeight, fH: standardHeight*5))
-                    .opacity(showLinks ? 1 : 0)
-                    .animation(.default, value: showLinks)
+                Button("T2SCHOLA") {
+                    showLinks = false
+                    UIApplication.shared.open(URL(string: "https://t2schola.titech.ac.jp/")!)
+                }
+                .buttonStyle(LinkButtonStyle(standardHeight: standardHeight))
+                .opacity(showLinks ? 1 : 0)
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: showLinks ? .trailing : .bottomTrailing)
+                .compositingGroup()
                 
                 Button("\(Image(systemName: showLinks ? "xmark.circle.fill" : "safari.fill"))") {
                     showLinks.toggle()
                 }
-                .buttonStyle(SafariButtonStyle(height: standardHeight*5))
-                .animation(.default, value: showLinks)
+                .buttonStyle(SafariButtonStyle(size: standardHeight*5))
+                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .bottomTrailing)
+                .compositingGroup()
+                
             }
-            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .bottomTrailing)
+            .frame(width: geometry.size.width, height: geometry.size.height)
+            .animation(.default, value: showLinks)
         }
     }
 }

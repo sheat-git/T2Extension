@@ -28,8 +28,10 @@ struct HomeView: View {
             
             let cardHeight = min(geometry.size.width*0.6, geometry.size.height*0.5)
             let cardWidth = min(geometry.size.width*0.9, geometry.size.height*0.75)
+            let padHeight = min(geometry.size.width*0.8, geometry.size.height*0.25)/30
             
             VStack {
+                
                 HStack {
                     Spacer()
                     
@@ -39,7 +41,7 @@ struct HomeView: View {
                     .buttonStyle(GuideButtonStyle(fontStyle: .system(size: cardHeight/11, weight: .medium, design: .default)))
                 }
                 .frame(width: cardWidth)
-                .padding(.vertical, 5)
+                .padding(.vertical, padHeight)
                 
                 CardFlippingView(account: $account, password: $password, row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7)
                     .frame(width: cardWidth, height: cardHeight)
@@ -48,22 +50,24 @@ struct HomeView: View {
                     editMode = true
                 }
                 .buttonStyle(EditButtonStyle(fontStyle: .system(size: cardHeight/15, weight: .bold, design: .default), pH: cardHeight/30, pV: cardHeight/100))
-                .padding()
+                .padding(.top, 16)
                 
                 Spacer()
                 
                 LinksView()
-                    .frame(width: cardWidth, height: min(geometry.size.width*0.8, geometry.size.height*0.25))
-                    .padding(.bottom, min(geometry.size.width*0.8, geometry.size.height*0.25)/30)
+                    .frame(width: cardWidth, height: padHeight*30)
+                
+                Spacer()
+                    .frame(maxHeight: padHeight*2)
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
+            .sheet(isPresented: $guideMode) {
+                GuideView(cardHeight: cardHeight, cardWidth: cardWidth, padHeight: padHeight)
+            }
+            .sheet(isPresented: $editMode) {
+                EditView(account: $account, password: $password, row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7, cardHeight: cardHeight, cardWidth: cardWidth, padHeight: padHeight)
+            }
         }
-        .navigate(to: EditView(editMode: $editMode, account: $account, password: $password, row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7), when: $editMode)
-        #if targetEnvironment(macCatalyst)
-        .navigate(to: GuideMacView(guideMode: $guideMode), when: $guideMode)
-        #else
-        .navigate(to: GuideiPhoneView(guideMode: $guideMode), when: $guideMode)
-        #endif
     }
 }
 

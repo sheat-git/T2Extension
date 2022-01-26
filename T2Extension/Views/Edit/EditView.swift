@@ -9,9 +9,7 @@ import SwiftUI
 
 struct EditView: View {
     
-    @State private var guideMode = false
-    
-    @Binding var editMode: Bool
+    @Environment(\.dismiss) var dismiss
     
     @Binding var account: String
     @Binding var password: String
@@ -24,36 +22,44 @@ struct EditView: View {
     @Binding var row6: String
     @Binding var row7: String
     
+    var cardHeight: CGFloat
+    var cardWidth: CGFloat
+    var padHeight: CGFloat
+    
     var body: some View {
-        VStack {
-            Spacer()
-            
-            Form {
-                Section(header: Text("Account")) {
-                    TextField("Account", text: $account)
-                    SecureField("Password", text: $password)
-                }
-                .textInputAutocapitalization(.never)
-                .keyboardType(.asciiCapable)
+        GeometryReader { geometry in
+            VStack(spacing: 0) {
                 
-                EditMatrixView(row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7)
+                HStack {
+                    Spacer()
+                    
+                    Button("\(Image(systemName: "checkmark.circle"))") {
+                        dismiss()
+                    }
+                    .buttonStyle(GuideButtonStyle(fontStyle: .system(size: cardHeight/11, weight: .medium, design: .default)))
+                }
+                .frame(width: geometry.size.width*0.9)
+                .padding(.top, padHeight*2)
+                
+                Form {
+                    Section(header: Text("Account")) {
+                        TextField("Account", text: $account)
+                        SecureField("Password", text: $password)
+                    }
+                    .textInputAutocapitalization(.never)
+                    .keyboardType(.asciiCapable)
+                    
+                    EditMatrixView(row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7)
+                }
+                
+                Spacer()
             }
-            
-            Button("\(Image(systemName: "checkmark.circle")) done") {
-                editMode = false
-            }
-            .buttonStyle(CapsuleButtonStyle())
-            
-            Spacer()
+            .background(Color.systemGroupedBackground)
         }
-        .background(Color.systemGroupedBackground)
-        .navigate(to: GuideEditView(guideMode: $guideMode), when: $guideMode)
     }
 }
 
 struct EditView_Previews: PreviewProvider {
-    
-    @State static var editMode = true
     
     @State static var account = "20B00000"
     @State static var password = "abcd1234"
@@ -67,6 +73,13 @@ struct EditView_Previews: PreviewProvider {
     @State static var row7: String = String.randomUppercase(length: 10)
     
     static var previews: some View {
-        EditView(editMode: $editMode, account: $account, password: $password, row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7)
+        GeometryReader { geometry in
+            
+            let cardHeight = min(geometry.size.width*0.6, geometry.size.height*0.5)
+            let cardWidth = min(geometry.size.width*0.9, geometry.size.height*0.75)
+            let padHeight = min(geometry.size.width*0.8, geometry.size.height*0.25)/30
+            
+            EditView(account: $account, password: $password, row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7, cardHeight: cardHeight, cardWidth: cardWidth, padHeight: padHeight)
+        }
     }
 }

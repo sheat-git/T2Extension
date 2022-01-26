@@ -13,6 +13,7 @@
 		670A3F0B277F2FBE00CE5338 /* CardBackMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F0A277F2FBE00CE5338 /* CardBackMatrixView.swift */; };
 		670A3F0D277F559000CE5338 /* CardBackMatrixRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F0C277F559000CE5338 /* CardBackMatrixRowView.swift */; };
 		67496B5527A0857800060F28 /* LinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67496B5427A0857800060F28 /* LinksView.swift */; };
+		67496B5727A0A3FF00060F28 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67496B5627A0A3FF00060F28 /* GuideView.swift */; };
 		6794FFC4278474C7008E0A67 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 6794FFC3278474C7008E0A67 /* fonts */; };
 		679802D02781691800112AF4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802CF2781691800112AF4 /* String.swift */; };
 		679802D22781894300112AF4 /* GuideEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802D12781894300112AF4 /* GuideEditView.swift */; };
@@ -77,6 +78,7 @@
 		670A3F0A277F2FBE00CE5338 /* CardBackMatrixView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackMatrixView.swift; sourceTree = "<group>"; };
 		670A3F0C277F559000CE5338 /* CardBackMatrixRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardBackMatrixRowView.swift; sourceTree = "<group>"; };
 		67496B5427A0857800060F28 /* LinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksView.swift; sourceTree = "<group>"; };
+		67496B5627A0A3FF00060F28 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		67878EC42781F85B00E5C9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6794FFC3278474C7008E0A67 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		679802CF2781691800112AF4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		67E42B2A2780CC0500680C85 /* Guide */ = {
 			isa = PBXGroup;
 			children = (
+				67496B5627A0A3FF00060F28 /* GuideView.swift */,
 				67E42B2B2780CC2E00680C85 /* GuideMacView.swift */,
 				67E42B2D2780CC3F00680C85 /* GuideiPhoneView.swift */,
 				679802D12781894300112AF4 /* GuideEditView.swift */,
@@ -505,6 +508,7 @@
 				67E42B2E2780CC3F00680C85 /* GuideiPhoneView.swift in Sources */,
 				670A3F07277F17D300CE5338 /* Color.swift in Sources */,
 				679802D02781691800112AF4 /* String.swift in Sources */,
+				67496B5727A0A3FF00060F28 /* GuideView.swift in Sources */,
 				67E42B2C2780CC2E00680C85 /* GuideMacView.swift in Sources */,
 				67E42B2427809CDA00680C85 /* CardFlippingView.swift in Sources */,
 			);
