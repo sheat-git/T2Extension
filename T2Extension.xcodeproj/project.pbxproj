@@ -660,7 +660,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = T2Extension/T2Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"T2Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				ENABLE_PREVIEWS = YES;
@@ -698,7 +698,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = T2Extension/T2Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"T2Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				ENABLE_PREVIEWS = YES;
@@ -732,7 +732,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
@@ -766,7 +766,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
