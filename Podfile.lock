@@ -1,6 +1,6 @@
 PODS:
   - KeychainAccess (4.2.2)
-  - LicensePlist (3.16.0)
+  - LicensePlist (3.25.1)
 
 DEPENDENCIES:
   - KeychainAccess
@@ -13,8 +13,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
-  LicensePlist: f91b2c4bd3379379cdfc0541693c3af031b9bcb3
+  LicensePlist: 8a2019452d6a6376d2b5a40e4170af6b62f51ee5
 
-PODFILE CHECKSUM: 026cc5d5c9236cdeccd5275463f8b7bde35d074f
+PODFILE CHECKSUM: 961920f07d077fd51fe57e3eda9639dba63f2a42
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.15.2
