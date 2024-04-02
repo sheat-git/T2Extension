@@ -7,7 +7,6 @@ function autoLogin() {
         case 'Tokyo Tech Portal':
             const agreeButton = document.getElementsByTagName('input')[1];
             browser.runtime.sendMessage(['getDate']).then((lastLogin) => {
-                console.log(lastLogin);
                 const now = new Date();
                 let nextLogin = new Date(lastLogin);
                 nextLogin.setSeconds(nextLogin.getSeconds() + 2);
@@ -45,20 +44,16 @@ function autoLogin() {
                 dotsFontLoad()
                 .then(disableAutocompletes(elements))
                 .then(() => {
-                    if (navigator.platform == 'iPhone' || navigator.platform == 'iPad') {
-                        matrix(document.getElementsByTagName('td'), [4, 5, 6]);
-                    } else {
-                        matrix(document.getElementsByTagName('th'), [4, 6, 8]);
-                    }
+                    matrix([...document.body.innerHTML.matchAll(/\[[A-Z],\d\]/g)].flat());
                 })
                 .catch(() => {;});
                 
-                function matrix(rawLocations, indexes) {
-                    return promiseR(rawLocations, indexes, element1, element2, element3).then(() => {
+                function matrix(locations) {
+                    return promiseR(locations, element1, element2, element3).then(() => {
                         login.click();
                     }).catch((error) => {
                         console.log(error);
-                        promiseR(rawLocations, indexes, element1, element2, element3).then(() => {
+                        promiseR(locations, element1, element2, element3).then(() => {
                             login.click();
                         });
                     });
@@ -72,8 +67,8 @@ function promiseAP(elementA, elementP) {
     return Promise.allSettled([getKCandSet('getAccount', elementA), getKCandSet('getPassword', elementP)]);
 }
 
-function promiseR(rawLocations, indexes, element1, element2, element3) {
-    return Promise.allSettled([getKCandSetRow(rawLocations.item(indexes[0]), element1), getKCandSetRow(rawLocations.item(indexes[1]), element2), getKCandSetRow(rawLocations.item(indexes[2]), element3)]);
+function promiseR(locations, element1, element2, element3) {
+    return Promise.allSettled([getKCandSetRow(locations[0], element1), getKCandSetRow(locations[1], element2), getKCandSetRow(locations[2], element3)]);
 }
 
 function getKCandSet(funcName, element) {
@@ -92,8 +87,8 @@ function getKCandSet(funcName, element) {
     });
 }
 
-function getKCandSetRow(locationElement, inputElement) {
-    const rowNum = locationElement.textContent.match(/[0-9]/g)[0];
+function getKCandSetRow(location, inputElement) {
+    const rowNum = location.match(/[0-9]/g)[0];
     return new Promise((resolve, reject) => {
         window.setTimeout(reject, 500, 'runtimeError');
         browser.runtime.sendMessage(['getRow', rowNum]).then((response) => {
@@ -102,7 +97,7 @@ function getKCandSetRow(locationElement, inputElement) {
             } else if (response == '') {
                 reject('responseError');
             } else {
-                inputElement.value = response.charAt(locationElement.textContent.match(/[A-Z]/g)[0].charCodeAt(0) - 65);
+                inputElement.value = response.charAt(location.match(/[A-Z]/g)[0].charCodeAt(0) - 65);
                 resolve();
             }
         });

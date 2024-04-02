@@ -10,8 +10,8 @@ name: LicensePlist, nameSpecified:
 body: MIT License
 
 Copyrig…
-version: 3.16.0
+version: 3.25.1
 
 add-version-numbers: false
 
-LicensePlist Version: 3.16.0
+LicensePlist Version: 3.25.1
