@@ -10,7 +10,7 @@ import SwiftUI
 struct EditMatrixRowView: View {
     @Binding var row: String
     var num: Int
-    
+
     var body: some View {
         ZStack(alignment: .trailing) {
             TextField("Row \(num)", text: $row)
@@ -25,11 +25,9 @@ struct EditMatrixRowView: View {
 }
 
 struct EditMatrixRowView_Previews: PreviewProvider {
-    
     @State static var row = String.randomUppercase(length: 9)
-    
+
     static var previews: some View {
         EditMatrixRowView(row: $row, num: 1)
     }
-    
 }

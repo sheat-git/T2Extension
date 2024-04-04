@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct GuideiPhoneView: View {
-    
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 Spacer()
-                
+
                 ScrollView {
                     VStack {
                         VStack(alignment: .leading, spacing: 10) {
@@ -29,18 +28,18 @@ struct GuideiPhoneView: View {
                             Text("5. Done if it likes below")
                         }
                         .lineLimit(nil)
-                        .frame(width: min(geometry.size.width*0.7, 500), alignment: .leading)
-                        
+                        .frame(width: min(geometry.size.width * 0.7, 500), alignment: .leading)
+
                         Image("GuideiPhone")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: min(geometry.size.width*0.7, 500))
+                            .frame(width: min(geometry.size.width * 0.7, 500))
                             .cornerRadius(20)
                             .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.accentColor, lineWidth: 4))
                     }
                     .frame(width: geometry.size.width)
                 }
-                
+
                 Spacer()
             }
         }
@@ -48,9 +47,7 @@ struct GuideiPhoneView: View {
 }
 
 struct GuideiPhoneView_Previews: PreviewProvider {
-    
     static var previews: some View {
         GuideiPhoneView()
     }
-    
 }

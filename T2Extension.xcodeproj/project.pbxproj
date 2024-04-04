@@ -14,7 +14,6 @@
 		670A3F0D277F559000CE5338 /* CardBackMatrixRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 670A3F0C277F559000CE5338 /* CardBackMatrixRowView.swift */; };
 		67496B5527A0857800060F28 /* LinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67496B5427A0857800060F28 /* LinksView.swift */; };
 		67496B5727A0A3FF00060F28 /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67496B5627A0A3FF00060F28 /* GuideView.swift */; };
-		6794FFC4278474C7008E0A67 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 6794FFC3278474C7008E0A67 /* fonts */; };
 		679802D02781691800112AF4 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802CF2781691800112AF4 /* String.swift */; };
 		679802D22781894300112AF4 /* GuideEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679802D12781894300112AF4 /* GuideEditView.swift */; };
 		67D427BA279C5CAD00644EAA /* SecureAppStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D427B9279C5CAD00644EAA /* SecureAppStorage.swift */; };
@@ -28,14 +27,6 @@
 		67FD90B3277ED5D8000FAB94 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90B2277ED5D8000FAB94 /* HomeView.swift */; };
 		67FD90B5277ED5DE000FAB94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90B4277ED5DE000FAB94 /* Assets.xcassets */; };
 		67FD90C6277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90C5277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift */; };
-		67FD90C9277ED629000FAB94 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90C8277ED629000FAB94 /* _locales */; };
-		67FD90CB277ED629000FAB94 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90CA277ED629000FAB94 /* images */; };
-		67FD90CD277ED629000FAB94 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90CC277ED629000FAB94 /* manifest.json */; };
-		67FD90CF277ED629000FAB94 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90CE277ED629000FAB94 /* background.js */; };
-		67FD90D1277ED629000FAB94 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90D0277ED629000FAB94 /* content.js */; };
-		67FD90D3277ED629000FAB94 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90D2277ED629000FAB94 /* popup.html */; };
-		67FD90D5277ED629000FAB94 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90D4277ED629000FAB94 /* popup.css */; };
-		67FD90D7277ED629000FAB94 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 67FD90D6277ED629000FAB94 /* popup.js */; };
 		67FD90DB277ED629000FAB94 /* T2AutoLogin.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 67FD90C3277ED629000FAB94 /* T2AutoLogin.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		67FD90E9277ED73E000FAB94 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90E8277ED73E000FAB94 /* EditView.swift */; };
 		67FD90EC277ED760000FAB94 /* EditMatrixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EB277ED760000FAB94 /* EditMatrixView.swift */; };
@@ -43,6 +34,28 @@
 		67FD90F0277ED7E0000FAB94 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */; };
 		67FD90F1277ED7E0000FAB94 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */; };
 		9E4320A57614FF19EDD4B1FA /* Pods_T2AutoLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B2046B7AACA3CB528D8929 /* Pods_T2AutoLogin.framework */; };
+		D39276EE2BBF123A00C4F31D /* safari.svg in Resources */ = {isa = PBXBuildFile; fileRef = D39276D52BBF123A00C4F31D /* safari.svg */; };
+		D39276EF2BBF123A00C4F31D /* T2AutoLogin_icon48.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276D62BBF123A00C4F31D /* T2AutoLogin_icon48.png */; };
+		D39276F02BBF123A00C4F31D /* T2AutoLogin_icon64.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276D72BBF123A00C4F31D /* T2AutoLogin_icon64.png */; };
+		D39276F12BBF123A00C4F31D /* T2AutoLogin_icon96.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276D82BBF123A00C4F31D /* T2AutoLogin_icon96.png */; };
+		D39276F22BBF123A00C4F31D /* T2AutoLogin_icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276D92BBF123A00C4F31D /* T2AutoLogin_icon128.png */; };
+		D39276F32BBF123A00C4F31D /* T2AutoLogin_icon256.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DA2BBF123A00C4F31D /* T2AutoLogin_icon256.png */; };
+		D39276F42BBF123A00C4F31D /* T2AutoLogin_icon512.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DB2BBF123A00C4F31D /* T2AutoLogin_icon512.png */; };
+		D39276F52BBF123A00C4F31D /* T2AutoLogin_toolbar16.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DC2BBF123A00C4F31D /* T2AutoLogin_toolbar16.png */; };
+		D39276F62BBF123A00C4F31D /* T2AutoLogin_toolbar19.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DD2BBF123A00C4F31D /* T2AutoLogin_toolbar19.png */; };
+		D39276F72BBF123A00C4F31D /* T2AutoLogin_toolbar32.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DE2BBF123A00C4F31D /* T2AutoLogin_toolbar32.png */; };
+		D39276F82BBF123A00C4F31D /* T2AutoLogin_toolbar38.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DF2BBF123A00C4F31D /* T2AutoLogin_toolbar38.png */; };
+		D39276F92BBF123A00C4F31D /* T2AutoLogin_toolbar48.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276E02BBF123A00C4F31D /* T2AutoLogin_toolbar48.png */; };
+		D39276FA2BBF123A00C4F31D /* T2AutoLogin_toolbar72.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276E12BBF123A00C4F31D /* T2AutoLogin_toolbar72.png */; };
+		D39276FB2BBF123A00C4F31D /* T2Extension.svg in Resources */ = {isa = PBXBuildFile; fileRef = D39276E22BBF123A00C4F31D /* T2Extension.svg */; };
+		D39276FC2BBF123A00C4F31D /* authenticate.js in Resources */ = {isa = PBXBuildFile; fileRef = D39276E42BBF123A00C4F31D /* authenticate.js */; };
+		D39276FD2BBF123A00C4F31D /* authenticate.js.LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D39276E52BBF123A00C4F31D /* authenticate.js.LICENSE.txt */; };
+		D39276FE2BBF123A00C4F31D /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = D39276E62BBF123A00C4F31D /* background.js */; };
+		D39276FF2BBF123A00C4F31D /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = D39276E72BBF123A00C4F31D /* popup.js */; };
+		D39277002BBF123A00C4F31D /* popup.js.LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D39276E82BBF123A00C4F31D /* popup.js.LICENSE.txt */; };
+		D39277012BBF123A00C4F31D /* redirect.js in Resources */ = {isa = PBXBuildFile; fileRef = D39276E92BBF123A00C4F31D /* redirect.js */; };
+		D39277022BBF123A00C4F31D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D39276EB2BBF123A00C4F31D /* manifest.json */; };
+		D39277032BBF123A00C4F31D /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = D39276EC2BBF123A00C4F31D /* popup.html */; };
 		E8AE7C62A1DD0649F5CF3363 /* Pods_T2Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E013538EABD83EEE73A7FD /* Pods_T2Extension.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +93,6 @@
 		67496B5427A0857800060F28 /* LinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksView.swift; sourceTree = "<group>"; };
 		67496B5627A0A3FF00060F28 /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
 		67878EC42781F85B00E5C9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		6794FFC3278474C7008E0A67 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		679802CF2781691800112AF4 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		679802D12781894300112AF4 /* GuideEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideEditView.swift; sourceTree = "<group>"; };
 		67A3A1A0277EE48700A70F65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -98,14 +110,6 @@
 		67FD90BE277ED5EA000FAB94 /* T2Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = T2Extension.entitlements; sourceTree = "<group>"; };
 		67FD90C3277ED629000FAB94 /* T2AutoLogin.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = T2AutoLogin.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		67FD90C5277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler_AutoLogin.swift; sourceTree = "<group>"; };
-		67FD90C8277ED629000FAB94 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
-		67FD90CA277ED629000FAB94 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
-		67FD90CC277ED629000FAB94 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
-		67FD90CE277ED629000FAB94 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
-		67FD90D0277ED629000FAB94 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
-		67FD90D2277ED629000FAB94 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
-		67FD90D4277ED629000FAB94 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
-		67FD90D6277ED629000FAB94 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		67FD90D8277ED629000FAB94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67FD90DC277ED629000FAB94 /* T2AutoLogin.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = T2AutoLogin.entitlements; sourceTree = "<group>"; };
 		67FD90E8277ED73E000FAB94 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
@@ -114,6 +118,28 @@
 		67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		884F28388B59B1D98C6FA48D /* Pods-T2Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2Extension.release.xcconfig"; path = "Target Support Files/Pods-T2Extension/Pods-T2Extension.release.xcconfig"; sourceTree = "<group>"; };
 		ABA7EB6DFE171256F89CBC35 /* Pods-T2Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2Extension.debug.xcconfig"; path = "Target Support Files/Pods-T2Extension/Pods-T2Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		D39276D52BBF123A00C4F31D /* safari.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = safari.svg; sourceTree = "<group>"; };
+		D39276D62BBF123A00C4F31D /* T2AutoLogin_icon48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon48.png; sourceTree = "<group>"; };
+		D39276D72BBF123A00C4F31D /* T2AutoLogin_icon64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon64.png; sourceTree = "<group>"; };
+		D39276D82BBF123A00C4F31D /* T2AutoLogin_icon96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon96.png; sourceTree = "<group>"; };
+		D39276D92BBF123A00C4F31D /* T2AutoLogin_icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon128.png; sourceTree = "<group>"; };
+		D39276DA2BBF123A00C4F31D /* T2AutoLogin_icon256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon256.png; sourceTree = "<group>"; };
+		D39276DB2BBF123A00C4F31D /* T2AutoLogin_icon512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon512.png; sourceTree = "<group>"; };
+		D39276DC2BBF123A00C4F31D /* T2AutoLogin_toolbar16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar16.png; sourceTree = "<group>"; };
+		D39276DD2BBF123A00C4F31D /* T2AutoLogin_toolbar19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar19.png; sourceTree = "<group>"; };
+		D39276DE2BBF123A00C4F31D /* T2AutoLogin_toolbar32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar32.png; sourceTree = "<group>"; };
+		D39276DF2BBF123A00C4F31D /* T2AutoLogin_toolbar38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar38.png; sourceTree = "<group>"; };
+		D39276E02BBF123A00C4F31D /* T2AutoLogin_toolbar48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar48.png; sourceTree = "<group>"; };
+		D39276E12BBF123A00C4F31D /* T2AutoLogin_toolbar72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar72.png; sourceTree = "<group>"; };
+		D39276E22BBF123A00C4F31D /* T2Extension.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = T2Extension.svg; sourceTree = "<group>"; };
+		D39276E42BBF123A00C4F31D /* authenticate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = authenticate.js; sourceTree = "<group>"; };
+		D39276E52BBF123A00C4F31D /* authenticate.js.LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = authenticate.js.LICENSE.txt; sourceTree = "<group>"; };
+		D39276E62BBF123A00C4F31D /* background.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		D39276E72BBF123A00C4F31D /* popup.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		D39276E82BBF123A00C4F31D /* popup.js.LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = popup.js.LICENSE.txt; sourceTree = "<group>"; };
+		D39276E92BBF123A00C4F31D /* redirect.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = redirect.js; sourceTree = "<group>"; };
+		D39276EB2BBF123A00C4F31D /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		D39276EC2BBF123A00C4F31D /* popup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
 		E5D5C5BE219DBC93729FD72D /* Pods-T2AutoLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2AutoLogin.debug.xcconfig"; path = "Target Support Files/Pods-T2AutoLogin/Pods-T2AutoLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		F4E013538EABD83EEE73A7FD /* Pods_T2Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T2Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB26A69235251D9AB67EB591 /* Pods-T2AutoLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2AutoLogin.release.xcconfig"; path = "Target Support Files/Pods-T2AutoLogin/Pods-T2AutoLogin.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,26 +258,10 @@
 			children = (
 				67FD90DC277ED629000FAB94 /* T2AutoLogin.entitlements */,
 				67FD90C5277ED629000FAB94 /* SafariWebExtensionHandler_AutoLogin.swift */,
+				D39276ED2BBF123A00C4F31D /* Resources */,
 				67FD90D8277ED629000FAB94 /* Info.plist */,
-				67FD90C7277ED629000FAB94 /* Resources */,
 			);
 			path = T2AutoLogin;
-			sourceTree = "<group>";
-		};
-		67FD90C7277ED629000FAB94 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				67FD90C8277ED629000FAB94 /* _locales */,
-				67FD90CA277ED629000FAB94 /* images */,
-				6794FFC3278474C7008E0A67 /* fonts */,
-				67FD90CC277ED629000FAB94 /* manifest.json */,
-				67FD90CE277ED629000FAB94 /* background.js */,
-				67FD90D0277ED629000FAB94 /* content.js */,
-				67FD90D2277ED629000FAB94 /* popup.html */,
-				67FD90D4277ED629000FAB94 /* popup.css */,
-				67FD90D6277ED629000FAB94 /* popup.js */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		67FD90E1277ED69A000FAB94 /* Views */ = {
@@ -293,6 +303,51 @@
 				884F28388B59B1D98C6FA48D /* Pods-T2Extension.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D39276E32BBF123A00C4F31D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				D39276D52BBF123A00C4F31D /* safari.svg */,
+				D39276D62BBF123A00C4F31D /* T2AutoLogin_icon48.png */,
+				D39276D72BBF123A00C4F31D /* T2AutoLogin_icon64.png */,
+				D39276D82BBF123A00C4F31D /* T2AutoLogin_icon96.png */,
+				D39276D92BBF123A00C4F31D /* T2AutoLogin_icon128.png */,
+				D39276DA2BBF123A00C4F31D /* T2AutoLogin_icon256.png */,
+				D39276DB2BBF123A00C4F31D /* T2AutoLogin_icon512.png */,
+				D39276DC2BBF123A00C4F31D /* T2AutoLogin_toolbar16.png */,
+				D39276DD2BBF123A00C4F31D /* T2AutoLogin_toolbar19.png */,
+				D39276DE2BBF123A00C4F31D /* T2AutoLogin_toolbar32.png */,
+				D39276DF2BBF123A00C4F31D /* T2AutoLogin_toolbar38.png */,
+				D39276E02BBF123A00C4F31D /* T2AutoLogin_toolbar48.png */,
+				D39276E12BBF123A00C4F31D /* T2AutoLogin_toolbar72.png */,
+				D39276E22BBF123A00C4F31D /* T2Extension.svg */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		D39276EA2BBF123A00C4F31D /* js */ = {
+			isa = PBXGroup;
+			children = (
+				D39276E42BBF123A00C4F31D /* authenticate.js */,
+				D39276E52BBF123A00C4F31D /* authenticate.js.LICENSE.txt */,
+				D39276E62BBF123A00C4F31D /* background.js */,
+				D39276E72BBF123A00C4F31D /* popup.js */,
+				D39276E82BBF123A00C4F31D /* popup.js.LICENSE.txt */,
+				D39276E92BBF123A00C4F31D /* redirect.js */,
+			);
+			path = js;
+			sourceTree = "<group>";
+		};
+		D39276ED2BBF123A00C4F31D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D39276E32BBF123A00C4F31D /* images */,
+				D39276EA2BBF123A00C4F31D /* js */,
+				D39276EB2BBF123A00C4F31D /* manifest.json */,
+				D39276EC2BBF123A00C4F31D /* popup.html */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,8 +435,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39276FE2BBF123A00C4F31D /* background.js in Resources */,
+				D39277032BBF123A00C4F31D /* popup.html in Resources */,
+				D39276FB2BBF123A00C4F31D /* T2Extension.svg in Resources */,
 				67D427BD279C647D00644EAA /* Settings.bundle in Resources */,
+				D39276F62BBF123A00C4F31D /* T2AutoLogin_toolbar19.png in Resources */,
+				D39276F92BBF123A00C4F31D /* T2AutoLogin_toolbar48.png in Resources */,
+				D39276F82BBF123A00C4F31D /* T2AutoLogin_toolbar38.png in Resources */,
+				D39276F52BBF123A00C4F31D /* T2AutoLogin_toolbar16.png in Resources */,
+				D39276FF2BBF123A00C4F31D /* popup.js in Resources */,
+				D39277012BBF123A00C4F31D /* redirect.js in Resources */,
+				D39276F72BBF123A00C4F31D /* T2AutoLogin_toolbar32.png in Resources */,
+				D39276F02BBF123A00C4F31D /* T2AutoLogin_icon64.png in Resources */,
+				D39276F12BBF123A00C4F31D /* T2AutoLogin_icon96.png in Resources */,
+				D39276EF2BBF123A00C4F31D /* T2AutoLogin_icon48.png in Resources */,
+				D39276FA2BBF123A00C4F31D /* T2AutoLogin_toolbar72.png in Resources */,
+				D39276EE2BBF123A00C4F31D /* safari.svg in Resources */,
+				D39276FC2BBF123A00C4F31D /* authenticate.js in Resources */,
+				D39276F22BBF123A00C4F31D /* T2AutoLogin_icon128.png in Resources */,
+				D39276F42BBF123A00C4F31D /* T2AutoLogin_icon512.png in Resources */,
 				67FD90B5277ED5DE000FAB94 /* Assets.xcassets in Resources */,
+				D39277002BBF123A00C4F31D /* popup.js.LICENSE.txt in Resources */,
+				D39277022BBF123A00C4F31D /* manifest.json in Resources */,
+				D39276FD2BBF123A00C4F31D /* authenticate.js.LICENSE.txt in Resources */,
+				D39276F32BBF123A00C4F31D /* T2AutoLogin_icon256.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,15 +466,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67FD90CF277ED629000FAB94 /* background.js in Resources */,
-				67FD90D5277ED629000FAB94 /* popup.css in Resources */,
-				67FD90D3277ED629000FAB94 /* popup.html in Resources */,
-				67FD90CB277ED629000FAB94 /* images in Resources */,
-				67FD90CD277ED629000FAB94 /* manifest.json in Resources */,
-				67FD90C9277ED629000FAB94 /* _locales in Resources */,
-				6794FFC4278474C7008E0A67 /* fonts in Resources */,
-				67FD90D1277ED629000FAB94 /* content.js in Resources */,
-				67FD90D7277ED629000FAB94 /* popup.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +660,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -646,6 +715,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

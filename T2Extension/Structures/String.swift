@@ -10,6 +10,6 @@ import Foundation
 extension String {
     static func randomUppercase(length: Int) -> String {
         let uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        return String((0..<length).map{ _ in uppercaseLetters.randomElement()!})
+        return String((0 ..< length).map { _ in uppercaseLetters.randomElement()! })
     }
 }

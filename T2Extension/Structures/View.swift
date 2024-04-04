@@ -23,7 +23,7 @@ extension View {
                 ) {
                     EmptyView()
                 }
-                
+
                 self
                     .navigationBarTitle("")
                     .navigationBarHidden(true)

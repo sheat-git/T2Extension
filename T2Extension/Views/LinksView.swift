@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct LinksView: View {
-    
     @State var showLinks = false
-    
+
     var body: some View {
         GeometryReader { geometry in
-            
-            let standardHeight = geometry.size.height/17
-            
+
+            let standardHeight = geometry.size.height / 17
+
             ZStack {
-                
                 Button("Tokyo Tech Poral") {
                     showLinks = false
                     UIApplication.shared.open(URL(string: "https://portal.titech.ac.jp")!)
@@ -26,7 +24,7 @@ struct LinksView: View {
                 .opacity(showLinks ? 1 : 0)
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: showLinks ? .topTrailing : .bottomTrailing)
                 .compositingGroup()
-                
+
                 Button("T2SCHOLA") {
                     showLinks = false
                     UIApplication.shared.open(URL(string: "https://t2schola.titech.ac.jp/")!)
@@ -35,14 +33,13 @@ struct LinksView: View {
                 .opacity(showLinks ? 1 : 0)
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: showLinks ? .trailing : .bottomTrailing)
                 .compositingGroup()
-                
+
                 Button("\(Image(systemName: showLinks ? "xmark.circle.fill" : "safari.fill"))") {
                     showLinks.toggle()
                 }
-                .buttonStyle(SafariButtonStyle(size: standardHeight*5))
+                .buttonStyle(SafariButtonStyle(size: standardHeight * 5))
                 .frame(width: geometry.size.width, height: geometry.size.height, alignment: .bottomTrailing)
                 .compositingGroup()
-                
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
             .animation(.default, value: showLinks)

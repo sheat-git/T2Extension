@@ -8,75 +8,74 @@
 import SwiftUI
 
 struct CardFrontView: View {
-    
     @Binding var account: String
     @Binding var password: String
-    
+
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
                 HStack {
                     Image("AppIconImage")
                         .resizable()
-                        .frame(width: geometry.size.width/7.5, height: geometry.size.height/5)
+                        .frame(width: geometry.size.width / 7.5, height: geometry.size.height / 5)
                         .foregroundColor(.letAccentColor)
                         .background(Color.systemBackground)
-                        .cornerRadius(geometry.size.width/30)
-                    
+                        .cornerRadius(geometry.size.width / 30)
+
                     VStack(alignment: .leading) {
                         Text("T2Extension")
                             .lineLimit(1)
-                            .font(.system(size: geometry.size.height/10, weight: .bold, design: .default))
+                            .font(.system(size: geometry.size.height / 10, weight: .bold, design: .default))
                         Text("for Tokyo Institute of Technology")
                             .lineLimit(1)
-                            .font(.system(size: geometry.size.height/20, weight: .regular, design: .serif))
+                            .font(.system(size: geometry.size.height / 20, weight: .regular, design: .serif))
                     }
                     .foregroundColor(.systemBackground)
-                    
+
                     Spacer()
                 }
-                .padding(geometry.size.width/60)
-                .padding(.top, geometry.size.height/40)
+                .padding(geometry.size.width / 60)
+                .padding(.top, geometry.size.height / 40)
                 .background(Color.letAccentColor)
-                
+
                 Rectangle()
                     .fill(Color.customSkyblue)
-                    .frame(height: geometry.size.height/40)
-                
+                    .frame(height: geometry.size.height / 40)
+
                 Rectangle()
                     .fill(Color.letAccentColor)
-                    .frame(height: geometry.size.height/40)
-                
+                    .frame(height: geometry.size.height / 40)
+
                 HStack {
                     Image(systemName: "person")
                         .resizable()
-                        .frame(width: geometry.size.width*11/30, height: geometry.size.height*11/20)
+                        .frame(width: geometry.size.width * 11 / 30, height: geometry.size.height * 11 / 20)
                         .foregroundColor(.letAccentColor)
-                    
+
                     Spacer()
-                    
+
                     VStack(alignment: .leading) {
                         Spacer()
                         Text("Account")
-                            .font(.system(size: geometry.size.height/20))
+                            .font(.system(size: geometry.size.height / 20))
                         Text(account)
-                            .font(.system(size: geometry.size.height/10, weight: .bold, design: .monospaced))
+                            .font(.system(size: geometry.size.height / 10, weight: .bold, design: .monospaced))
                         Spacer()
                         Text("Password")
-                            .font(.system(size: geometry.size.height/20))
+                            .font(.system(size: geometry.size.height / 20))
                         Text(String(repeating: "*", count: password.count))
-                            .font(.system(size: geometry.size.height/10, weight: .bold, design: .monospaced))
+                            .font(.system(size: geometry.size.height / 10, weight: .bold, design: .monospaced))
                         Spacer()
                     }
-                    
+
                     Spacer()
                 }
                 .padding(10)
-                
+
                 Spacer()
             }
             .background(Color.systemBackground)
-            .cornerRadius(geometry.size.width/20)
+            .cornerRadius(geometry.size.width / 20)
             .compositingGroup()
         }
     }
@@ -91,10 +90,9 @@ struct _CardFrontView: View {
 }
 
 struct CardFrontView_Previews: PreviewProvider {
-    
     @State static var account = "20B00000"
     @State static var password = "abcd1234"
-    
+
     static var previews: some View {
         CardFrontView(account: $account, password: $password)
             .frame(width: 300, height: 200)

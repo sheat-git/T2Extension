@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct EditMatrixView: View {
-    
     @Binding var row1: String
     @Binding var row2: String
     @Binding var row3: String
@@ -16,11 +15,11 @@ struct EditMatrixView: View {
     @Binding var row5: String
     @Binding var row6: String
     @Binding var row7: String
-    
+
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     @State private var showAlert = false
-    
+
     var body: some View {
         Section(header: Text("Matrix Code")) {
             EditMatrixRowView(row: $row1, num: 1)
@@ -40,12 +39,12 @@ struct EditMatrixView: View {
             }
         }
         .alert(alertTitle, isPresented: $showAlert) {
-            Button("Close"){}
+            Button("Close") {}
         } message: {
             Text(alertMessage)
         }
     }
-    
+
     private func matrixImport() {
         alertTitle = "Error!"
         alertMessage = "Incorrect format"
@@ -56,11 +55,11 @@ struct EditMatrixView: View {
         let matrixJson: String = rawStr ?? ""
         let matrixData = matrixJson.data(using: String.Encoding.utf8)!
         let _matrix: [String]? = try? JSONSerialization.jsonObject(with: matrixData) as? [String]
-        if (_matrix == nil) {
+        if _matrix == nil {
             return
         }
         let matrix = _matrix!
-        if (matrix.count != 70) {
+        if matrix.count != 70 {
             return
         }
         row1 = ""
@@ -70,31 +69,31 @@ struct EditMatrixView: View {
         row5 = ""
         row6 = ""
         row7 = ""
-        for i in 0..<10 {
-            row1 += matrix[i*7+0]
-            row2 += matrix[i*7+1]
-            row3 += matrix[i*7+2]
-            row4 += matrix[i*7+3]
-            row5 += matrix[i*7+4]
-            row6 += matrix[i*7+5]
-            row7 += matrix[i*7+6]
+        for i in 0 ..< 10 {
+            row1 += matrix[i * 7 + 0]
+            row2 += matrix[i * 7 + 1]
+            row3 += matrix[i * 7 + 2]
+            row4 += matrix[i * 7 + 3]
+            row5 += matrix[i * 7 + 4]
+            row6 += matrix[i * 7 + 5]
+            row7 += matrix[i * 7 + 6]
         }
         alertTitle = "Success!"
         alertMessage = "Fill Matrix Code"
     }
-    
+
     private func matrixExport() {
         alertTitle = "Error!"
         alertMessage = "Incorrect Matrix Code format"
-        if (row1.count != 10 || row2.count != 10 || row3.count != 10 || row4.count != 10 || row5.count != 10 || row6.count != 10 || row7.count != 10) {
+        if row1.count != 10 || row2.count != 10 || row3.count != 10 || row4.count != 10 || row5.count != 10 || row6.count != 10 || row7.count != 10 {
             return
         }
         let all: String = row1 + row2 + row3 + row4 + row5 + row6 + row7
         let arrayT: [String] = all.map { String($0) }
         var array = [String](repeating: "A", count: 70)
-        for i in 0..<10 {
-            for j in 0..<7 {
-                array[i*7+j] = arrayT[i+j*10]
+        for i in 0 ..< 10 {
+            for j in 0 ..< 7 {
+                array[i * 7 + j] = arrayT[i + j * 10]
             }
         }
         let jsonData = try! JSONSerialization.data(withJSONObject: array)
@@ -106,15 +105,14 @@ struct EditMatrixView: View {
 }
 
 struct EditMatrixView_Previews: PreviewProvider {
-    
-    @State static var row1: String = String.randomUppercase(length: 10)
-    @State static var row2: String = String.randomUppercase(length: 10)
-    @State static var row3: String = String.randomUppercase(length: 10)
-    @State static var row4: String = String.randomUppercase(length: 10)
-    @State static var row5: String = String.randomUppercase(length: 10)
-    @State static var row6: String = String.randomUppercase(length: 10)
-    @State static var row7: String = String.randomUppercase(length: 10)
-    
+    @State static var row1: String = .randomUppercase(length: 10)
+    @State static var row2: String = .randomUppercase(length: 10)
+    @State static var row3: String = .randomUppercase(length: 10)
+    @State static var row4: String = .randomUppercase(length: 10)
+    @State static var row5: String = .randomUppercase(length: 10)
+    @State static var row6: String = .randomUppercase(length: 10)
+    @State static var row7: String = .randomUppercase(length: 10)
+
     static var previews: some View {
         Form {
             EditMatrixView(row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7)

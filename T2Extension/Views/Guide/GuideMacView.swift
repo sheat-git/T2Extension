@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct GuideMacView: View {
-    
     var body: some View {
         GeometryReader { geometry in
             VStack {
                 Spacer()
-                
+
                 ScrollView {
                     VStack {
                         VStack(alignment: .leading, spacing: 10) {
@@ -29,8 +28,8 @@ struct GuideMacView: View {
                             Text("5. Done if it likes below")
                         }
                         .lineLimit(nil)
-                        .frame(width: geometry.size.width*0.9, alignment: .leading)
-                        
+                        .frame(width: geometry.size.width * 0.9, alignment: .leading)
+
                         Image("GuideMac-Extensions_done")
                             .resizable()
                             .scaledToFit()
@@ -38,7 +37,7 @@ struct GuideMacView: View {
                     }
                     .frame(width: geometry.size.width)
                 }
-                
+
                 Spacer()
             }
         }
@@ -46,9 +45,7 @@ struct GuideMacView: View {
 }
 
 struct GuideMacView_Previews: PreviewProvider {
-    
     static var previews: some View {
         GuideMacView()
     }
-    
 }
