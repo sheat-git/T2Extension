@@ -1,5 +1,6 @@
 {
   "manifest_version": 2,
+  "default_locale": "en",
   "name": "T2AutoLogin",
   "description": "T2AutoLogin lets you to automarically login to titech.",
   "version": "2.0.0",

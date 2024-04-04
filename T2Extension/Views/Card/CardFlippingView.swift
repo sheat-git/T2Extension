@@ -19,56 +19,40 @@ struct CardFlippingView: View {
     @Binding var row6: String
     @Binding var row7: String
 
-    @State private var flipped = false
-    @State private var animate3d = false
+    @State private var isFlipped = false
 
     var body: some View {
         GeometryReader { geometry in
             ZStack {
                 CardFrontView(account: $account, password: $password)
                     .frame(width: geometry.size.width, height: geometry.size.height)
-                    .opacity(flipped ? 0.0 : 1.0)
+                    .modifier(FlipOpacity(percentage: isFlipped ? 0 : 1))
+                    .rotation3DEffect(.degrees(isFlipped ? 180 : 360), axis: (0, 1, 0), perspective: 0.5)
                 CardBackView(row1: $row1, row2: $row2, row3: $row3, row4: $row4, row5: $row5, row6: $row6, row7: $row7)
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .opacity(flipped ? 1.0 : 0.0)
+                    .modifier(FlipOpacity(percentage: isFlipped ? 1 : 0))
+                    .rotation3DEffect(.degrees(isFlipped ? 0 : 180), axis: (0, 1, 0), perspective: 0.5)
             }
             .shadow(color: .secondary, radius: 15)
-            .modifier(CardFlipEffect(flipped: $flipped, angle: animate3d ? 180 : 0, axis: (x: 0, y: -1)))
             .onTapGesture {
                 withAnimation(Animation.linear(duration: 0.8)) {
-                    self.animate3d.toggle()
+                    self.isFlipped.toggle()
                 }
             }
         }
     }
 }
 
-struct CardFlipEffect: GeometryEffect {
-    var animatableData: Double {
-        get { angle }
-        set { angle = newValue }
+private struct FlipOpacity: AnimatableModifier {
+    var percentage: CGFloat = 0
+
+    var animatableData: CGFloat {
+        get { percentage }
+        set { percentage = newValue }
     }
 
-    @Binding var flipped: Bool
-    var angle: Double
-    let axis: (x: CGFloat, y: CGFloat)
-
-    func effectValue(size: CGSize) -> ProjectionTransform {
-        DispatchQueue.main.async {
-            self.flipped = self.angle >= 90 && self.angle < 270
-        }
-
-        let tweakedAngle = flipped ? -180 + angle : angle
-        let a = CGFloat(Angle(degrees: tweakedAngle).radians)
-        var transform3d = CATransform3DIdentity
-        transform3d.m34 = -0.3 / max(size.width, size.height)
-
-        transform3d = CATransform3DRotate(transform3d, a, axis.x, axis.y, 0)
-        transform3d = CATransform3DTranslate(transform3d, -size.width / 2.0, -size.height / 2.0, 0)
-
-        let affineTransform = ProjectionTransform(CGAffineTransform(translationX: size.width / 2.0, y: size.height / 2.0))
-
-        return ProjectionTransform(transform3d).concatenating(affineTransform)
+    func body(content: Content) -> some View {
+        content
+            .opacity(Double(percentage.rounded()))
     }
 }
 

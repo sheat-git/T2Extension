@@ -14,6 +14,7 @@ const config: Configuration = {
     path: `${__dirname}/../T2Extension/Extensions/T2AutoLogin/Resources`,
     publicPath: './',
     filename: 'js/[name].js',
+    clean: true,
   },
   module: {
     rules: [

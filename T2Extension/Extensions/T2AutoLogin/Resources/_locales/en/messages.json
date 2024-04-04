@@ -1,0 +1,10 @@
+{
+  "extension_name": {
+    "message": "T2AutoLogin",
+    "description": "The display name for the extension."
+  },
+  "extension_description": {
+    "message": "T2AutoLogin lets you to automarically login to tokyo tech portal.",
+    "description": "Description of what the extension does."
+  }
+}
