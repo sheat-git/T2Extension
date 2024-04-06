@@ -1,1 +1,1 @@
-(()=>{"use strict";browser.runtime.onMessage.addListener(((e,r,s)=>{switch(e.function){case"OPEN_APPLICATION":return!0;case"GET_ACCOUNT":return browser.runtime.sendNativeMessage("application.id",{message:"GET_ACCOUNT"}).then((e=>s({data:e,error:null}))).catch((e=>s({data:null,error:e}))),!0}}))})();
+(()=>{"use strict";browser.runtime.onMessage.addListener(((e,r,n)=>{if("GET_ACCOUNT"===e.function)return browser.runtime.sendNativeMessage("application.id",{function:"GET_ACCOUNT"}).then((e=>n({data:e,error:null}))).catch((e=>n({data:null,error:e}))),!0}))})();

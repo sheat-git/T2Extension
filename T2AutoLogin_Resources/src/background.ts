@@ -4,12 +4,10 @@ import { Message } from './runtime/Message'
 browser.runtime.onMessage.addListener(
   (message: Message, sender, sendResponse: (response: Response) => any) => {
     switch (message.function) {
-      case 'OPEN_APPLICATION':
-        return true
       case 'GET_ACCOUNT':
         browser.runtime
           .sendNativeMessage('application.id', {
-            message: 'GET_ACCOUNT',
+            function: 'GET_ACCOUNT',
           })
           .then((response) =>
             sendResponse({

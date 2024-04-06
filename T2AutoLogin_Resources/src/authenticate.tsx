@@ -19,6 +19,4 @@ switch (document.title) {
     renderAuthentication()
     i18next.changeLanguage('en')
     break
-  default:
-    break
 }

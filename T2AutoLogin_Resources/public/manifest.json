@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "default_locale": "en",
   "name": "T2AutoLogin",
   "description": "T2AutoLogin lets you to automarically login to titech.",
@@ -12,9 +12,7 @@
     "512": "images/T2AutoLogin_icon512.png"
   },
   "background": {
-    "scripts": [
-      "js/background.js"
-    ],
+    "service_worker": "js/background.js",
     "persistent": false
   },
   "content_scripts": [
@@ -26,7 +24,8 @@
       ],
       "js": [
         "js/redirect.js"
-      ]
+      ],
+      "run_at": "document_start"
     },
     {
       "matches": [
@@ -34,22 +33,14 @@
       ],
       "js": [
         "js/authenticate.js"
-      ]
+      ],
+      "run_at": "document_end"
     }
   ],
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "images/T2AutoLogin_toolbar16.png",
-      "19": "images/T2AutoLogin_toolbar19.png",
-      "32": "images/T2AutoLogin_toolbar32.png",
-      "38": "images/T2AutoLogin_toolbar38.png",
-      "48": "images/T2AutoLogin_toolbar48.png",
-      "72": "images/T2AutoLogin_toolbar72.png"
-    }
-  },
   "permissions": [
-    "https://*.titech.ac.jp/*",
     "nativeMessaging"
+  ],
+  "host_permissions": [
+    "https://*.titech.ac.jp/*"
   ]
 }

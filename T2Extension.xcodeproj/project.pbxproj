@@ -34,28 +34,10 @@
 		67FD90F0277ED7E0000FAB94 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */; };
 		67FD90F1277ED7E0000FAB94 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */; };
 		9E4320A57614FF19EDD4B1FA /* Pods_T2AutoLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B2046B7AACA3CB528D8929 /* Pods_T2AutoLogin.framework */; };
-		D39276EE2BBF123A00C4F31D /* safari.svg in Resources */ = {isa = PBXBuildFile; fileRef = D39276D52BBF123A00C4F31D /* safari.svg */; };
-		D39276EF2BBF123A00C4F31D /* T2AutoLogin_icon48.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276D62BBF123A00C4F31D /* T2AutoLogin_icon48.png */; };
-		D39276F02BBF123A00C4F31D /* T2AutoLogin_icon64.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276D72BBF123A00C4F31D /* T2AutoLogin_icon64.png */; };
-		D39276F12BBF123A00C4F31D /* T2AutoLogin_icon96.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276D82BBF123A00C4F31D /* T2AutoLogin_icon96.png */; };
-		D39276F22BBF123A00C4F31D /* T2AutoLogin_icon128.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276D92BBF123A00C4F31D /* T2AutoLogin_icon128.png */; };
-		D39276F32BBF123A00C4F31D /* T2AutoLogin_icon256.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DA2BBF123A00C4F31D /* T2AutoLogin_icon256.png */; };
-		D39276F42BBF123A00C4F31D /* T2AutoLogin_icon512.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DB2BBF123A00C4F31D /* T2AutoLogin_icon512.png */; };
-		D39276F52BBF123A00C4F31D /* T2AutoLogin_toolbar16.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DC2BBF123A00C4F31D /* T2AutoLogin_toolbar16.png */; };
-		D39276F62BBF123A00C4F31D /* T2AutoLogin_toolbar19.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DD2BBF123A00C4F31D /* T2AutoLogin_toolbar19.png */; };
-		D39276F72BBF123A00C4F31D /* T2AutoLogin_toolbar32.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DE2BBF123A00C4F31D /* T2AutoLogin_toolbar32.png */; };
-		D39276F82BBF123A00C4F31D /* T2AutoLogin_toolbar38.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276DF2BBF123A00C4F31D /* T2AutoLogin_toolbar38.png */; };
-		D39276F92BBF123A00C4F31D /* T2AutoLogin_toolbar48.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276E02BBF123A00C4F31D /* T2AutoLogin_toolbar48.png */; };
-		D39276FA2BBF123A00C4F31D /* T2AutoLogin_toolbar72.png in Resources */ = {isa = PBXBuildFile; fileRef = D39276E12BBF123A00C4F31D /* T2AutoLogin_toolbar72.png */; };
-		D39276FB2BBF123A00C4F31D /* T2Extension.svg in Resources */ = {isa = PBXBuildFile; fileRef = D39276E22BBF123A00C4F31D /* T2Extension.svg */; };
-		D39276FC2BBF123A00C4F31D /* authenticate.js in Resources */ = {isa = PBXBuildFile; fileRef = D39276E42BBF123A00C4F31D /* authenticate.js */; };
-		D39276FD2BBF123A00C4F31D /* authenticate.js.LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D39276E52BBF123A00C4F31D /* authenticate.js.LICENSE.txt */; };
-		D39276FE2BBF123A00C4F31D /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = D39276E62BBF123A00C4F31D /* background.js */; };
-		D39276FF2BBF123A00C4F31D /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = D39276E72BBF123A00C4F31D /* popup.js */; };
-		D39277002BBF123A00C4F31D /* popup.js.LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = D39276E82BBF123A00C4F31D /* popup.js.LICENSE.txt */; };
-		D39277012BBF123A00C4F31D /* redirect.js in Resources */ = {isa = PBXBuildFile; fileRef = D39276E92BBF123A00C4F31D /* redirect.js */; };
-		D39277022BBF123A00C4F31D /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D39276EB2BBF123A00C4F31D /* manifest.json */; };
-		D39277032BBF123A00C4F31D /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = D39276EC2BBF123A00C4F31D /* popup.html */; };
+		D329286A2BC1B559000E46A6 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = D39276EB2BBF123A00C4F31D /* manifest.json */; };
+		D329286E2BC1B695000E46A6 /* images in Resources */ = {isa = PBXBuildFile; fileRef = D329286D2BC1B683000E46A6 /* images */; };
+		D329286F2BC1B69A000E46A6 /* js in Resources */ = {isa = PBXBuildFile; fileRef = D329286C2BC1B66E000E46A6 /* js */; };
+		D32928722BC1B6B1000E46A6 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = D32928702BC1B6A6000E46A6 /* _locales */; };
 		E8AE7C62A1DD0649F5CF3363 /* Pods_T2Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4E013538EABD83EEE73A7FD /* Pods_T2Extension.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,28 +100,10 @@
 		67FD90EF277ED7E0000FAB94 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		884F28388B59B1D98C6FA48D /* Pods-T2Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2Extension.release.xcconfig"; path = "Target Support Files/Pods-T2Extension/Pods-T2Extension.release.xcconfig"; sourceTree = "<group>"; };
 		ABA7EB6DFE171256F89CBC35 /* Pods-T2Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2Extension.debug.xcconfig"; path = "Target Support Files/Pods-T2Extension/Pods-T2Extension.debug.xcconfig"; sourceTree = "<group>"; };
-		D39276D52BBF123A00C4F31D /* safari.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = safari.svg; sourceTree = "<group>"; };
-		D39276D62BBF123A00C4F31D /* T2AutoLogin_icon48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon48.png; sourceTree = "<group>"; };
-		D39276D72BBF123A00C4F31D /* T2AutoLogin_icon64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon64.png; sourceTree = "<group>"; };
-		D39276D82BBF123A00C4F31D /* T2AutoLogin_icon96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon96.png; sourceTree = "<group>"; };
-		D39276D92BBF123A00C4F31D /* T2AutoLogin_icon128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon128.png; sourceTree = "<group>"; };
-		D39276DA2BBF123A00C4F31D /* T2AutoLogin_icon256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon256.png; sourceTree = "<group>"; };
-		D39276DB2BBF123A00C4F31D /* T2AutoLogin_icon512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_icon512.png; sourceTree = "<group>"; };
-		D39276DC2BBF123A00C4F31D /* T2AutoLogin_toolbar16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar16.png; sourceTree = "<group>"; };
-		D39276DD2BBF123A00C4F31D /* T2AutoLogin_toolbar19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar19.png; sourceTree = "<group>"; };
-		D39276DE2BBF123A00C4F31D /* T2AutoLogin_toolbar32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar32.png; sourceTree = "<group>"; };
-		D39276DF2BBF123A00C4F31D /* T2AutoLogin_toolbar38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar38.png; sourceTree = "<group>"; };
-		D39276E02BBF123A00C4F31D /* T2AutoLogin_toolbar48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar48.png; sourceTree = "<group>"; };
-		D39276E12BBF123A00C4F31D /* T2AutoLogin_toolbar72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = T2AutoLogin_toolbar72.png; sourceTree = "<group>"; };
-		D39276E22BBF123A00C4F31D /* T2Extension.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = T2Extension.svg; sourceTree = "<group>"; };
-		D39276E42BBF123A00C4F31D /* authenticate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = authenticate.js; sourceTree = "<group>"; };
-		D39276E52BBF123A00C4F31D /* authenticate.js.LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = authenticate.js.LICENSE.txt; sourceTree = "<group>"; };
-		D39276E62BBF123A00C4F31D /* background.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
-		D39276E72BBF123A00C4F31D /* popup.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
-		D39276E82BBF123A00C4F31D /* popup.js.LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = popup.js.LICENSE.txt; sourceTree = "<group>"; };
-		D39276E92BBF123A00C4F31D /* redirect.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = redirect.js; sourceTree = "<group>"; };
+		D329286C2BC1B66E000E46A6 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		D329286D2BC1B683000E46A6 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		D32928702BC1B6A6000E46A6 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
 		D39276EB2BBF123A00C4F31D /* manifest.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
-		D39276EC2BBF123A00C4F31D /* popup.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
 		E5D5C5BE219DBC93729FD72D /* Pods-T2AutoLogin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2AutoLogin.debug.xcconfig"; path = "Target Support Files/Pods-T2AutoLogin/Pods-T2AutoLogin.debug.xcconfig"; sourceTree = "<group>"; };
 		F4E013538EABD83EEE73A7FD /* Pods_T2Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T2Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB26A69235251D9AB67EB591 /* Pods-T2AutoLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T2AutoLogin.release.xcconfig"; path = "Target Support Files/Pods-T2AutoLogin/Pods-T2AutoLogin.release.xcconfig"; sourceTree = "<group>"; };
@@ -305,47 +269,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		D39276E32BBF123A00C4F31D /* images */ = {
-			isa = PBXGroup;
-			children = (
-				D39276D52BBF123A00C4F31D /* safari.svg */,
-				D39276D62BBF123A00C4F31D /* T2AutoLogin_icon48.png */,
-				D39276D72BBF123A00C4F31D /* T2AutoLogin_icon64.png */,
-				D39276D82BBF123A00C4F31D /* T2AutoLogin_icon96.png */,
-				D39276D92BBF123A00C4F31D /* T2AutoLogin_icon128.png */,
-				D39276DA2BBF123A00C4F31D /* T2AutoLogin_icon256.png */,
-				D39276DB2BBF123A00C4F31D /* T2AutoLogin_icon512.png */,
-				D39276DC2BBF123A00C4F31D /* T2AutoLogin_toolbar16.png */,
-				D39276DD2BBF123A00C4F31D /* T2AutoLogin_toolbar19.png */,
-				D39276DE2BBF123A00C4F31D /* T2AutoLogin_toolbar32.png */,
-				D39276DF2BBF123A00C4F31D /* T2AutoLogin_toolbar38.png */,
-				D39276E02BBF123A00C4F31D /* T2AutoLogin_toolbar48.png */,
-				D39276E12BBF123A00C4F31D /* T2AutoLogin_toolbar72.png */,
-				D39276E22BBF123A00C4F31D /* T2Extension.svg */,
-			);
-			path = images;
-			sourceTree = "<group>";
-		};
-		D39276EA2BBF123A00C4F31D /* js */ = {
-			isa = PBXGroup;
-			children = (
-				D39276E42BBF123A00C4F31D /* authenticate.js */,
-				D39276E52BBF123A00C4F31D /* authenticate.js.LICENSE.txt */,
-				D39276E62BBF123A00C4F31D /* background.js */,
-				D39276E72BBF123A00C4F31D /* popup.js */,
-				D39276E82BBF123A00C4F31D /* popup.js.LICENSE.txt */,
-				D39276E92BBF123A00C4F31D /* redirect.js */,
-			);
-			path = js;
-			sourceTree = "<group>";
-		};
 		D39276ED2BBF123A00C4F31D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D39276E32BBF123A00C4F31D /* images */,
-				D39276EA2BBF123A00C4F31D /* js */,
+				D32928702BC1B6A6000E46A6 /* _locales */,
+				D329286D2BC1B683000E46A6 /* images */,
+				D329286C2BC1B66E000E46A6 /* js */,
 				D39276EB2BBF123A00C4F31D /* manifest.json */,
-				D39276EC2BBF123A00C4F31D /* popup.html */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -435,30 +365,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D39276FE2BBF123A00C4F31D /* background.js in Resources */,
-				D39277032BBF123A00C4F31D /* popup.html in Resources */,
-				D39276FB2BBF123A00C4F31D /* T2Extension.svg in Resources */,
 				67D427BD279C647D00644EAA /* Settings.bundle in Resources */,
-				D39276F62BBF123A00C4F31D /* T2AutoLogin_toolbar19.png in Resources */,
-				D39276F92BBF123A00C4F31D /* T2AutoLogin_toolbar48.png in Resources */,
-				D39276F82BBF123A00C4F31D /* T2AutoLogin_toolbar38.png in Resources */,
-				D39276F52BBF123A00C4F31D /* T2AutoLogin_toolbar16.png in Resources */,
-				D39276FF2BBF123A00C4F31D /* popup.js in Resources */,
-				D39277012BBF123A00C4F31D /* redirect.js in Resources */,
-				D39276F72BBF123A00C4F31D /* T2AutoLogin_toolbar32.png in Resources */,
-				D39276F02BBF123A00C4F31D /* T2AutoLogin_icon64.png in Resources */,
-				D39276F12BBF123A00C4F31D /* T2AutoLogin_icon96.png in Resources */,
-				D39276EF2BBF123A00C4F31D /* T2AutoLogin_icon48.png in Resources */,
-				D39276FA2BBF123A00C4F31D /* T2AutoLogin_toolbar72.png in Resources */,
-				D39276EE2BBF123A00C4F31D /* safari.svg in Resources */,
-				D39276FC2BBF123A00C4F31D /* authenticate.js in Resources */,
-				D39276F22BBF123A00C4F31D /* T2AutoLogin_icon128.png in Resources */,
-				D39276F42BBF123A00C4F31D /* T2AutoLogin_icon512.png in Resources */,
 				67FD90B5277ED5DE000FAB94 /* Assets.xcassets in Resources */,
-				D39277002BBF123A00C4F31D /* popup.js.LICENSE.txt in Resources */,
-				D39277022BBF123A00C4F31D /* manifest.json in Resources */,
-				D39276FD2BBF123A00C4F31D /* authenticate.js.LICENSE.txt in Resources */,
-				D39276F32BBF123A00C4F31D /* T2AutoLogin_icon256.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +374,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32928722BC1B6B1000E46A6 /* _locales in Resources */,
+				D329286F2BC1B69A000E46A6 /* js in Resources */,
+				D329286E2BC1B695000E46A6 /* images in Resources */,
+				D329286A2BC1B559000E46A6 /* manifest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +654,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -780,7 +692,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -808,7 +720,7 @@
 				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = T2AutoLogin;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -842,7 +754,7 @@
 				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = T2AutoLogin;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

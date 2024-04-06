@@ -72,7 +72,7 @@ const reducer: Reducer<State, Action> = (state: State, action: Action) => {
         status: 'error',
       }
     case 'OPEN_APPLICATION':
-      sendMessage({ function: 'OPEN_APPLICATION' })
+      location.href = 'T2Extension-app://'
       return state
   }
 }
@@ -113,11 +113,18 @@ const getData = async (): Promise<
     }
 > => {
   try {
+    const response = await sendMessage({ function: 'GET_ACCOUNT' })
+    if (response.error) {
+      return {
+        isError: true,
+        value: { type: 'ERROR_LOAD', error: 'LOAD_FAILURE' },
+      }
+    }
     const account: {
       id: string
       password: string
       rows: string[]
-    } = await browser.runtime.sendMessage({ function: 'GET_ACCOUNT' })
+    } = response.data
     if (!account) {
       return {
         isError: true,
