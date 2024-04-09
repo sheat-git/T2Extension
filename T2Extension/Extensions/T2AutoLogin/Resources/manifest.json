@@ -3,7 +3,7 @@
   "default_locale": "en",
   "name": "T2AutoLogin",
   "description": "T2AutoLogin lets you to automarically login to titech.",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "icons": {
     "48": "images/T2AutoLogin_icon48.png",
     "96": "images/T2AutoLogin_icon96.png",
@@ -29,8 +29,8 @@
     {
       "matches": [
         "https://portal.titech.ac.jp/",
-        "https://portal.titech.ac.jp/portal-e.pl",
-        "https://portal.titech.ac.jp/portal.pl"
+        "https://portal.titech.ac.jp/portal.pl",
+        "https://portal.titech.ac.jp/portal-e.pl"
       ],
       "js": [
         "js/redirect.js"
@@ -43,6 +43,15 @@
       ],
       "js": [
         "js/authenticate.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://rp.nap.gsic.titech.ac.jp/vpnaccess_apm/service/"
+      ],
+      "js": [
+        "js/login_vpn.js"
       ],
       "run_at": "document_end"
     }

@@ -3,24 +3,30 @@ import { Message } from './runtime/Message'
 
 browser.runtime.onMessage.addListener(
   (message: Message, sender, sendResponse: (response: Response) => any) => {
+    const resolve = (promise: Promise<any>) =>
+      promise.then(
+        (response) =>
+          sendResponse({
+            data: response,
+            error: null,
+          }),
+        (error) =>
+          sendResponse({
+            data: null,
+            error: error,
+          }),
+      )
+    const resolveSimpleFunction = (func: string) =>
+      resolve(
+        browser.runtime.sendNativeMessage('application.id', {
+          function: func,
+        }),
+      )
+
     switch (message.function) {
       case 'GET_ACCOUNT':
-        browser.runtime
-          .sendNativeMessage('application.id', {
-            function: 'GET_ACCOUNT',
-          })
-          .then(
-            (response) =>
-              sendResponse({
-                data: response,
-                error: null,
-              }),
-            (error) =>
-              sendResponse({
-                data: null,
-                error: error,
-              }),
-          )
+      case 'GET_PASSWORD':
+        resolveSimpleFunction(message.function)
         return true
     }
   },
