@@ -9,17 +9,17 @@ browser.runtime.onMessage.addListener(
           .sendNativeMessage('application.id', {
             function: 'GET_ACCOUNT',
           })
-          .then((response) =>
-            sendResponse({
-              data: response,
-              error: null,
-            }),
-          )
-          .catch((error) =>
-            sendResponse({
-              data: null,
-              error: error,
-            }),
+          .then(
+            (response) =>
+              sendResponse({
+                data: response,
+                error: null,
+              }),
+            (error) =>
+              sendResponse({
+                data: null,
+                error: error,
+              }),
           )
         return true
     }

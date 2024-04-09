@@ -1,7 +1,7 @@
 import React, { Reducer, useEffect, useState } from 'react'
 import { AsyncActionHandlers, useReducerAsync } from 'use-reducer-async'
 import { useTranslation } from 'react-i18next'
-import { parse } from 'node-html-parser'
+import { HTMLElement, parse } from 'node-html-parser'
 import toast, { Toaster } from 'react-hot-toast'
 import { sendMessage } from '../runtime/Message'
 
@@ -12,6 +12,7 @@ type State = ToastState | null
 type ToastState = {
   message: ToastMessageState
   status: 'loading' | 'error'
+  showOpenApplication?: boolean
 }
 
 type ToastMessageState =
@@ -23,8 +24,7 @@ type ErrorState =
   | 'ACCOUNT_NOT_SET'
   | 'MATRIX_NOT_SET'
   | 'LOAD_FAILURE'
-  | 'INVALID_ACCOUNT'
-  | 'INVALID_MATRIX'
+  | 'MATRIX_UNAVAILABLE'
   | 'INVALID_STATUS_CODE'
   | 'AUTHENTICATE_FAILURE'
 
@@ -47,6 +47,7 @@ const reducer: Reducer<State, Action> = (state: State, action: Action) => {
       return {
         message: `ERROR_${action.error}`,
         status: 'error',
+        showOpenApplication: action.error !== 'LOAD_FAILURE',
       }
     case 'START_AUTHENTICATE':
       return {
@@ -67,9 +68,9 @@ const reducer: Reducer<State, Action> = (state: State, action: Action) => {
       return null
     case 'ERROR_AUTHENTICATE':
       return {
-        id: 'AUTHENTICATE',
         message: `ERROR_${action.error}`,
         status: 'error',
+        showOpenApplication: action.error !== 'MATRIX_UNAVAILABLE',
       }
     case 'OPEN_APPLICATION':
       location.href = 'T2Extension-app://'
@@ -163,6 +164,14 @@ const getData = async (): Promise<
   }
 }
 
+const extractInputs = (root: HTMLElement) =>
+  root
+    .getElementsByTagName('input')
+    .reduce((inputs: { [key: string]: string }, input) => {
+      inputs[input.attrs['name']] = input.attrs['value'] ?? ''
+      return inputs
+    }, {})
+
 const asyncActionHandlers: AsyncActionHandlers<
   Reducer<State, Action>,
   AsyncAction
@@ -178,6 +187,7 @@ const asyncActionHandlers: AsyncActionHandlers<
       const { account, matrix } = data.value
       dispatch({ type: 'START_AUTHENTICATE' })
       try {
+        // Accound, Passwordの認証
         const accountResponse = await fetch(
           LOGIN_URL + '?Template=userpass_key&AUTHMETHOD=UserPassword',
           {
@@ -193,12 +203,7 @@ const asyncActionHandlers: AsyncActionHandlers<
           return
         }
         const accountRoot = parse(await accountResponse.text())
-        const accountInputs = accountRoot
-          .querySelectorAll('input')
-          .reduce((inputs: { [key: string]: string }, input) => {
-            inputs[input.attrs['name']] = input.attrs['value'] ?? ''
-            return inputs
-          }, {})
+        const accountInputs = extractInputs(accountRoot)
         accountInputs['usr_name'] = account.id
         accountInputs['usr_password'] = account.password
         const someResponse = await fetch(LOGIN_URL, {
@@ -206,16 +211,75 @@ const asyncActionHandlers: AsyncActionHandlers<
           body: new URLSearchParams(accountInputs),
           referrer: LOGIN_URL,
         })
-        const matrixResponse = someResponse
-        const matrixHtml = await matrixResponse.text()
-        dispatch({ type: 'UPDATE_AUTHENTICATE' })
+        if (!someResponse.ok) {
+          dispatch({
+            type: 'ERROR_AUTHENTICATE',
+            error: 'INVALID_STATUS_CODE',
+          })
+          return
+        }
+
+        // Matrix認証へ移行
+        const someHtml = await someResponse.text()
+        let matrixHtml: string
+        let addMessage6: boolean
+        const someReplacedHtml = someHtml.replace(
+          /<script.*?>.*?<\/script>/gis,
+          '',
+        )
+        if (
+          someReplacedHtml.includes('Select Label for OTP') ||
+          someReplacedHtml.includes('Token Only')
+        ) {
+          const someRoot = parse(someHtml, {
+            voidTag: { tags: ['option', 'input'] },
+          })
+          const optionElements = someRoot.getElementsByTagName('option')
+          const optionElement = optionElements.find(
+            (e) => e.attrs['value'] === 'GridAuthOption',
+          )
+          if (!optionElement) {
+            dispatch({
+              type: 'ERROR_AUTHENTICATE',
+              error: 'MATRIX_UNAVAILABLE',
+            })
+            return
+          } else {
+            dispatch({ type: 'UPDATE_AUTHENTICATE' })
+          }
+          const someInputs = extractInputs(someRoot)
+          for (const selectElement of someRoot.getElementsByTagName('select')) {
+            const name = selectElement.attrs['name']
+            if (selectElement.childNodes.includes(optionElement)) {
+              someInputs[name] = 'GridAuthOption'
+            } else {
+              someInputs[name] =
+                selectElement.getElementsByTagName('option')[0].attrs['value']
+            }
+          }
+          const matrixResponse = await fetch(LOGIN_URL, {
+            method: 'POST',
+            body: new URLSearchParams(someInputs),
+            referrer: LOGIN_URL,
+          })
+          if (!matrixResponse.ok) {
+            dispatch({
+              type: 'ERROR_AUTHENTICATE',
+              error: 'INVALID_STATUS_CODE',
+            })
+            return
+          }
+          matrixHtml = await matrixResponse.text()
+          addMessage6 = true
+        } else {
+          dispatch({ type: 'UPDATE_AUTHENTICATE' })
+          matrixHtml = someHtml
+          addMessage6 = false
+        }
+
+        // Matrix認証
         const matrixRoot = parse(matrixHtml)
-        const matrixInputs = matrixRoot
-          .querySelectorAll('input')
-          .reduce((inputs: { [key: string]: string }, input) => {
-            inputs[input.attrs['name']] = input.attrs['value'] ?? ''
-            return inputs
-          }, {})
+        const matrixInputs = extractInputs(matrixRoot)
         matrixHtml
           .match(/\[[A-Z],\d\]/g)
           ?.slice(0, 3)
@@ -224,6 +288,9 @@ const asyncActionHandlers: AsyncActionHandlers<
             const y = value.charCodeAt(3) - 49 // '1'
             matrixInputs[`message${i + 3}`] = matrix[x][y]
           })
+        if (addMessage6) {
+          matrixInputs['message6'] = 'NoOtherIGAuthOption'
+        }
         const response = await fetch(LOGIN_URL, {
           method: 'POST',
           body: new URLSearchParams(matrixInputs),
@@ -278,9 +345,11 @@ export const Authentication: React.FC = () => {
           toast.error(
             <div>
               <div>{t(state.message)}</div>
-              <button onClick={() => dispatch({ type: 'OPEN_APPLICATION' })}>
-                {t('OPEN_APPLICATION')}
-              </button>
+              {state.showOpenApplication && (
+                <button onClick={() => dispatch({ type: 'OPEN_APPLICATION' })}>
+                  {t('OPEN_APPLICATION')}
+                </button>
+              )}
             </div>,
             {
               id: matrixToastId ?? accountToastId ?? undefined,

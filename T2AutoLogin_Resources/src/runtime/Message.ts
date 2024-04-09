@@ -5,7 +5,7 @@ export interface Message {
   argument?: any
 }
 
-export type RuntimeFunction = 'OPEN_APPLICATION' | 'GET_ACCOUNT'
+export type RuntimeFunction = 'GET_ACCOUNT'
 
 export const sendMessage = async (message: Message): Promise<Response> => {
   return await browser.runtime.sendMessage(message)

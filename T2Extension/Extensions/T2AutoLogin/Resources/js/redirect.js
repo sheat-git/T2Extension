@@ -1,1 +1,1 @@
-(()=>{"use strict";location.href="https://portal.nap.gsic.titech.ac.jp/"})();
+(()=>{"use strict";location.href.includes("portal-e")?location.href="https://portal.nap.gsic.titech.ac.jp/portal-e.pl":location.href="https://portal.nap.gsic.titech.ac.jp/"})();
