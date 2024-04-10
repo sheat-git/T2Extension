@@ -1,6 +1,18 @@
-export type Response =
+import { Message } from './Message'
+
+type DataMapping = {
+  GET_ACCOUNT: {
+    id: string
+    password: string
+    rows: string[]
+  }
+  GET_PASSWORD: string
+  EXECUTE_SCRIPT: undefined
+}
+
+export type Response<M extends Message> =
   | {
-      data: any
+      data: DataMapping[M['function']]
       error: null
     }
   | {

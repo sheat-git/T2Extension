@@ -3,7 +3,7 @@
   "default_locale": "en",
   "name": "T2AutoLogin",
   "description": "T2AutoLogin lets you to automarically login to titech.",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "icons": {
     "48": "images/T2AutoLogin_icon48.png",
     "96": "images/T2AutoLogin_icon96.png",
@@ -11,6 +11,13 @@
     "256": "images/T2AutoLogin_icon256.png",
     "512": "images/T2AutoLogin_icon512.png"
   },
+  "permissions": [
+    "nativeMessaging",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.titech.ac.jp/*"
+  ],
   "action": {
     "default_icon": {
       "16": "images/T2AutoLogin_toolbar16.png",
@@ -28,38 +35,22 @@
   "content_scripts": [
     {
       "matches": [
-        "https://portal.titech.ac.jp/",
-        "https://portal.titech.ac.jp/portal.pl",
-        "https://portal.titech.ac.jp/portal-e.pl"
+        "https://*.titech.ac.jp/*"
       ],
       "js": [
-        "js/redirect.js"
+        "js/content.js"
       ],
       "run_at": "document_start"
-    },
-    {
-      "matches": [
-        "https://portal.nap.gsic.titech.ac.jp/*"
-      ],
-      "js": [
-        "js/authenticate.js"
-      ],
-      "run_at": "document_end"
-    },
-    {
-      "matches": [
-        "https://rp.nap.gsic.titech.ac.jp/vpnaccess_apm/service/"
-      ],
-      "js": [
-        "js/login_vpn.js"
-      ],
-      "run_at": "document_end"
     }
   ],
-  "permissions": [
-    "nativeMessaging"
-  ],
-  "host_permissions": [
-    "https://*.titech.ac.jp/*"
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "js/"
+      ],
+      "matches": [
+        "https://*.titech.ac.jp/*"
+      ]
+    }
   ]
 }

@@ -1,12 +1,14 @@
 import { Response } from './Response'
 
-export interface Message {
-  function: RuntimeFunction
-  argument?: any
-}
+export type Message =
+  | {
+      function: 'GET_ACCOUNT' | 'GET_PASSWORD'
+    }
+  | {
+      function: 'EXECUTE_SCRIPT'
+      file: string
+    }
 
-export type RuntimeFunction = 'GET_ACCOUNT' | 'GET_PASSWORD'
-
-export const sendMessage = async (message: Message): Promise<Response> => {
-  return await browser.runtime.sendMessage(message)
-}
+export const sendMessage = async <M extends Message>(
+  message: M,
+): Promise<Response<M>> => browser.runtime.sendMessage(message)

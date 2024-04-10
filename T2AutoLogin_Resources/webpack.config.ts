@@ -6,10 +6,9 @@ const config: Configuration = {
   mode: (process.env.NODE_ENV ?? 'development') as Configuration['mode'],
   entry: {
     popup: './src/popup.tsx',
-    authenticate: './src/authenticate.tsx',
-    redirect: './src/redirect.ts',
     background: './src/background.ts',
-    login_vpn: './src/login_vpn.ts',
+    authenticate: './src/authenticate.tsx',
+    content: './src/content.ts',
   },
   output: {
     path: `${__dirname}/../T2Extension/Extensions/T2AutoLogin/Resources`,

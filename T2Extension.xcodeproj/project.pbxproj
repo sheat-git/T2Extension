@@ -646,7 +646,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = T2Extension/T2Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"T2Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				ENABLE_PREVIEWS = YES;
@@ -663,7 +663,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.sheat.T2Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -684,7 +684,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = T2Extension/T2Extension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_ASSET_PATHS = "\"T2Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				ENABLE_PREVIEWS = YES;
@@ -701,7 +701,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = tokyo.sheat.T2Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
@@ -718,7 +718,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
@@ -730,7 +730,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -752,7 +752,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = T2Extension/Extensions/T2AutoLogin/T2AutoLogin.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = CC2UWUR3MQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = T2Extension/Extensions/T2AutoLogin/Info.plist;
@@ -764,7 +764,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.1.0;
+				MARKETING_VERSION = 2.1.1;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,

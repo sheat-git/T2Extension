@@ -121,11 +121,7 @@ const getData = async (): Promise<
         value: { type: 'ERROR_LOAD', error: 'LOAD_FAILURE' },
       }
     }
-    const account: {
-      id: string
-      password: string
-      rows: string[]
-    } = response.data
+    const account = response.data
     if (!account) {
       return {
         isError: true,
@@ -156,7 +152,8 @@ const getData = async (): Promise<
         ) as Matrix,
       },
     }
-  } catch {
+  } catch (e) {
+    console.error(e)
     return {
       isError: true,
       value: { type: 'ERROR_LOAD', error: 'LOAD_FAILURE' },
