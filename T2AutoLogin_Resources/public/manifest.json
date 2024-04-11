@@ -3,7 +3,7 @@
   "default_locale": "en",
   "name": "T2AutoLogin",
   "description": "T2AutoLogin lets you to automarically login to titech.",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "icons": {
     "48": "images/T2AutoLogin_icon48.png",
     "96": "images/T2AutoLogin_icon96.png",
