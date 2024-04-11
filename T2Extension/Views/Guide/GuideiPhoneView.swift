@@ -19,7 +19,7 @@ struct GuideiPhoneView: View {
                             HStack {
                                 Text("1. Open")
                                 Button("Settings App") {
-                                    UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+                                    UIApplication.shared.open(URL(string: "App-Prefs:SAFARI&path=WEB_EXTENSIONS/T2AutoLogin")!)
                                 }
                             }
                             Text("2. Move to \"Safari > Extensions > T2AutoLogin\"")
