@@ -18,7 +18,7 @@ struct CardBackMatrixRowView: View {
                     Text((row + " ").prefix(i).suffix(1))
                         .font(.system(size: geometry.size.height - 3, weight: .regular, design: .monospaced))
                         .frame(width: geometry.size.width / 10, height: geometry.size.height)
-                        .background((rowNum % 2 == 0) ? Color.systemBackground : Color.customSkyblue)
+                        .background((rowNum % 2 == 0) ? Color.secondarySystemGroupedBackground : Color.customSkyblue)
                 }
             }
         }

@@ -51,7 +51,7 @@ struct CardBackView: View {
 
                 Spacer()
             }
-            .background(Color.systemBackground)
+            .background(Color.secondarySystemGroupedBackground)
             .cornerRadius(geometry.size.width / 20)
             .compositingGroup()
         }

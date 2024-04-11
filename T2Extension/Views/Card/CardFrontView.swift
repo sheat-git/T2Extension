@@ -19,7 +19,7 @@ struct CardFrontView: View {
                         .resizable()
                         .frame(width: geometry.size.width / 7.5, height: geometry.size.height / 5)
                         .foregroundColor(.letAccentColor)
-                        .background(Color.systemBackground)
+                        .background(Color.secondarySystemGroupedBackground)
                         .cornerRadius(geometry.size.width / 30)
 
                     VStack(alignment: .leading) {
@@ -30,7 +30,7 @@ struct CardFrontView: View {
                             .lineLimit(1)
                             .font(.system(size: geometry.size.height / 20, weight: .regular, design: .serif))
                     }
-                    .foregroundColor(.systemBackground)
+                    .foregroundColor(.secondarySystemGroupedBackground)
 
                     Spacer()
                 }
@@ -74,7 +74,7 @@ struct CardFrontView: View {
 
                 Spacer()
             }
-            .background(Color.systemBackground)
+            .background(Color.secondarySystemGroupedBackground)
             .cornerRadius(geometry.size.width / 20)
             .compositingGroup()
         }

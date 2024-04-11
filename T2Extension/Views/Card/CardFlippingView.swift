@@ -20,6 +20,8 @@ struct CardFlippingView: View {
     @Binding var row7: String
 
     @State private var isFlipped = false
+    
+    @Environment(\.colorScheme) private var colorScheme
 
     var body: some View {
         GeometryReader { geometry in
@@ -32,7 +34,7 @@ struct CardFlippingView: View {
                     .modifier(FlipOpacity(percentage: isFlipped ? 1 : 0))
                     .rotation3DEffect(.degrees(isFlipped ? 0 : 180), axis: (0, 1, 0), perspective: 0.5)
             }
-            .shadow(color: .secondary, radius: 15)
+            .shadow(color: .secondary, radius: colorScheme == .light ? 15 : 0)
             .onTapGesture {
                 withAnimation(Animation.linear(duration: 0.8)) {
                     self.isFlipped.toggle()
