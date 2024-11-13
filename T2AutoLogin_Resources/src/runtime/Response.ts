@@ -7,7 +7,7 @@ type DataMapping = {
     rows: string[]
   }
   GET_PASSWORD: string
-  EXECUTE_SCRIPT: undefined
+  AUTHENTICATE: undefined
 }
 
 export type Response<M extends Message> =

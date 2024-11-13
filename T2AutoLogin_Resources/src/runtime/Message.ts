@@ -1,13 +1,8 @@
 import { Response } from './Response'
 
-export type Message =
-  | {
-      function: 'GET_ACCOUNT' | 'GET_PASSWORD'
-    }
-  | {
-      function: 'EXECUTE_SCRIPT'
-      file: string
-    }
+export type Message = {
+  function: 'GET_ACCOUNT' | 'GET_PASSWORD' | 'AUTHENTICATE'
+}
 
 export const sendMessage = async <M extends Message>(
   message: M,

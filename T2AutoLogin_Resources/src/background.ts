@@ -34,7 +34,7 @@ browser.runtime.onMessage.addListener(
       case 'GET_PASSWORD':
         resolveNativeMessage(message.function)
         return true
-      case 'EXECUTE_SCRIPT':
+      case 'AUTHENTICATE':
         resolve(async () => {
           const tab = await browser.tabs.getCurrent()
           const tabId = tab?.id
@@ -42,7 +42,7 @@ browser.runtime.onMessage.addListener(
           await browser.scripting.executeScript({
             target: { tabId },
             world: 'ISOLATED',
-            files: [message.file],
+            files: ['js/authenticate.js'],
           })
         })
         return true

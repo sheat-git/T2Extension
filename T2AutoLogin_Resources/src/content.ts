@@ -19,8 +19,7 @@ const main = async () => {
     // authenticate
     case 'portal.nap.gsic.titech.ac.jp':
       browser.runtime.sendMessage({
-        function: 'EXECUTE_SCRIPT',
-        file: browser.runtime.getURL('js/authenticate.js'),
+        function: 'AUTHENTICATE',
       })
       return
 
